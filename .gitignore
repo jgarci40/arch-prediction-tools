@@ -5,3 +5,4 @@
 .Rhistory
 .Rapp.history
 *.dc.out
+*.lo.out

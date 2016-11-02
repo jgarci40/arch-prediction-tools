@@ -3,6 +3,8 @@ require(MASS) #glm.nb
 require(ROCR)
 require(randomForest)
 
+
+
 library("optparse")
 
 option_list = list(
@@ -26,18 +28,19 @@ TrainingData<-read.csv(file.path(opt$train),header=T)
 TestData<-read.csv(file.path(opt$test),header=T)
 
 
-summary(m1 <- glm.nb(BCOnextRelease ~ log2(LOC+1) + log2(numberOfCommits+1) + log2(CountClassCoupled+1) + log2(MaxInheritanceTree+1) + log2(PercentLackOfCohesion+1) + log2(SumCyclomatic+1) +log2(coChangedDifferentPackage+1)+log2(coChangedSamePackage+1)+ log2(NumCochangedFiles+1) + BCO + SPF + BDC + BUO +log2(incomingDep+1) + log2(outgoingDep+1) + log2(internalEdges +1) + log2(externalEdges +1) + log2(edgesInto+1) + log2(edgesOutOf+1), data= TrainingData))
+summary(m1 <- glm.nb(BUOnextRelease ~ log2(LOC+1) + log2(numberOfCommits+1) + log2(CountClassCoupled+1) + log2(MaxInheritanceTree+1) + log2(PercentLackOfCohesion+1) + log2(SumCyclomatic+1) +log2(coChangedDifferentPackage+1)+log2(coChangedSamePackage+1)+ log2(NumCochangedFiles+1) + BCO + SPF + BDC + BUO +log2(incomingDep+1) + log2(outgoingDep+1) + log2(internalEdges +1) + log2(externalEdges +1) + log2(edgesInto+1) + log2(edgesOutOf+1), data= TrainingData))
 
 step <- stepAIC(m1, direction="both")
 step$anova # display results
 
 classification_glmnb <- function (train, test) 
 {  
-	model.glm.nb <- glm.nb(BCOnextRelease ~ log2(coChangedDifferentPackage + 1) + BCO + 
-    log2(outgoingDep + 1) + log2(edgesInto + 1), data=train)	
+	model.glm.nb <- glm.nb(BUOnextRelease ~ log2(LOC + 1) + log2(coChangedDifferentPackage + 
+    1) + BCO + log2(incomingDep + 1) + log2(internalEdges + 1) + 
+    log2(edgesOutOf + 1), data=train)	
 	test.prob <- predict(model.glm.nb, test, type="response")		
 	
-	pred <- prediction(test.prob, test$BCOnextRelease>0)
+	pred <- prediction(test.prob, test$BUOnextRelease>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
 	
 	#return(list(auc=auc))
@@ -46,7 +49,7 @@ classification_glmnb <- function (train, test)
 }
 
 
-summary(m1 <- lm(BCOnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
+summary(m1 <- lm(BUOnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
 
 step <- stepAIC(m1, direction="both")
 step$anova # display results
@@ -54,10 +57,11 @@ step$anova # display results
 
 classification_linear <- function (train, test) 
 {
-	model.lm <- lm(BCOnextRelease ~ LOC + MaxInheritanceTree + SumCyclomatic + coChangedDifferentPackage + 
-    BCO + SPF + outgoingDep + internalEdges + externalEdges, data=train)
+	model.lm <- lm(BUOnextRelease ~ LOC + CountClassCoupled + PercentLackOfCohesion + 
+    coChangedDifferentPackage + coChangedSamePackage + BCO + 
+    BUO + incomingDep + edgesInto, data=train)
 	test.prob <- predict(model.lm, test, type="response")
-	pred <- prediction(test.prob, test$BCOnextRelease>0)
+	pred <- prediction(test.prob, test$BUOnextRelease>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
 	print(paste0("L-AUC:", auc))	
 }
@@ -67,9 +71,9 @@ classification_linear <- function (train, test)
 
 classification_randomForest <- function (train, test) 
 {
-	randomForest <- randomForest(BCOnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= train)
+	randomForest <- randomForest(BUOnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= train)
 	test.prob <- predict(randomForest, test, type="response")
-	pred <- prediction(test.prob, test$BCOnextRelease>0)
+	pred <- prediction(test.prob, test$BUOnextRelease>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
 	print(paste0("F-AUC:", auc))	
 	
@@ -80,4 +84,12 @@ classification_randomForest <- function (train, test)
 classification_glmnb(TrainingData, TestData)
 classification_linear(TrainingData, TestData)
 classification_randomForest(TrainingData, TestData)
+
+
+
+
+
+
+
+
 
