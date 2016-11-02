@@ -1,0 +1,15 @@
+org.apache.cassandra.io 44 60 428 8 87 903 0 0 1 0 100 11 80 45 9 6 18 293 142 151 0 0 1 0 0.126
+org.apache.cassandra.db.marshal 13 9 61 0 29 164 0 0 1 0 19 9 0 4 5 2 10 68 34 34 0 0 1 0 0.225
+org.apache.cassandra.service 297 224 2124 38 411 14548 0 0 1 1 513 36 61 5 8 13 59 1041 264 777 0 0 1 1 0.093
+org.apache.cassandra.net 16 21 176 16 48 1504 0 0 1 0 181 11 78 24 9 6 72 504 233 271 0 0 1 0 0.194
+org.apache.cassandra.config 8 35 125 2 45 793 0 0 1 0 47 2 7 2 11 5 1 99 48 51 0 0 1 1 0.018
+org.apache.cassandra.db 203 184 1513 30 359 4695 0 0 1 0 611 38 0 13 7 10 111 940 171 769 0 0 1 0 0.172
+org.apache.cassandra.db.filter 38 49 299 0 72 449 0 0 1 0 91 14 50 12 2 7 16 156 40 116 0 0 1 0 0.168
+org.apache.cassandra.cli 7 7 67 0 23 470 0 0 0 0 58 6 0 14 0 1 11 164 24 140 0 0 0 0 0.168
+org.apache.cassandra.concurrent 9 10 60 2 25 180 0 0 1 0 50 10 75 11 6 1 14 134 31 103 0 0 1 0 0.148
+org.apache.cassandra.dht 40 39 395 10 73 1123 0 0 1 0 144 15 26 14 8 8 34 280 74 206 0 0 1 0 0.159
+org.apache.cassandra.net.io 0 4 38 2 10 325 0 0 1 0 32 3 71 13 3 3 37 146 28 118 0 0 1 0 0.284
+org.apache.cassandra.gms 6 11 86 9 23 914 0 0 1 0 81 4 53 5 3 5 28 189 54 135 0 0 1 0 0.219
+org.apache.cassandra.locator 13 14 111 2 25 424 0 0 1 0 51 6 48 22 4 6 7 86 9 77 0 0 1 0 0.16
+org.apache.cassandra.client 0 3 16 0 3 56 0 0 0 0 21 1 46 7 0 5 0 33 0 33 0 0 0 0 0.0
+org.apache.cassandra.utils 2 19 171 7 43 862 0 0 1 1 99 9 33 9 13 3 16 354 112 242 0 0 1 1 0.054

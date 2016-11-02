@@ -1,0 +1,6 @@
+*.co.out
+*.sf.out
+.DS_Store
+.RData
+.Rhistory
+.Rapp.history

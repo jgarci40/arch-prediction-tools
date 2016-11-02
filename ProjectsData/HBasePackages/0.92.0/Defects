@@ -1,0 +1,15 @@
+> classification_glmnb(TrainingData, TestData)
+[1] " AUC:0.755208333333333"
+> classification_linear(TrainingData, TestData)
+[1] " AUC:0.817708333333333"
+> classification_randomForest(TrainingData, TestData)
+[1] " AUC:0.739583333333333"
+> 
+> 
+> 
+> ranking_glmnb(TrainingData, TestData)
+[1] " spearman: 0.764860848257011 spearman.p: 3.44775344471144e-07"
+> ranking_linear(TrainingData, TestData)
+[1] " spearman: 0.785071716732166 spearman.p: 1.03751643597205e-07"
+> ranking_randomForest(TrainingData, TestData)
+[1] " spearman: 0.768013002055889 spearman.p: 2.88156438478872e-07"

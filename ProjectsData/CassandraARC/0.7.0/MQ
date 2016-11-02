@@ -1,0 +1,15 @@
+> classification_glmnb(TrainingData, TestData)
+[1] " AUC:0.907004830917874"
+There were 50 or more warnings (use warnings() to see the first 50)
+> classification_linear(TrainingData, TestData)
+[1] " AUC:0.671497584541063"
+> classification_randomForest(TrainingData, TestData)
+[1] " AUC:0.992753623188406"
+> 
+> ranking_glmnb(TrainingData, TestData)
+[1] " spearman: 0.849039754641116 spearman.p: 2.62876870395342e-16"
+There were 50 or more warnings (use warnings() to see the first 50)
+> ranking_linear(TrainingData, TestData)
+[1] " spearman: 0.328330458836366 spearman.p: 0.0143931084132047"
+> ranking_randomForest(TrainingData, TestData)
+[1] " spearman: 0.957956265844927 spearman.p: 2.07283882048404e-30"
