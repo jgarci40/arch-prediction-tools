@@ -16,6 +16,7 @@ option_list = list(
 
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
+sig_level<-0.01
 
 options(digits=2)
 # this is wrapped in a tryCatch. The first expression works when source executes, the
@@ -33,6 +34,15 @@ summary(m1 <- glm.nb(MQnextRelease ~ log2(LOC+1) + log2(numberOfCommits+1) + log
 step <- stepAIC(m1, direction="both")
 step$anova # display results
 
+is_sig_func <- function(spearman.p) {
+  is_sig = "SIG"
+  if (spearman.p < sig_level) {
+    is_sig = "SIG"
+  } else {
+    is_sig = "NOT"
+  }
+  return(is_sig)
+}
 
 classification_glmnb <- function (train, test) 
 {  
@@ -54,7 +64,7 @@ ranking_glmnb <- function (train, test)
 	spearman <- cor(test$MQnextRelease, test.pred, method="spearman")
 	spearman.p <- cor.test(test$MQnextRelease, test.pred, method="spearman", exact=FALSE)$p.value
 	#return(list(spearman=spearman, spearman.p=spearman.p))
-	print(paste0("N-spearman: ", spearman, "N-spearman.p: ", spearman.p))
+	print(paste0("N-spearman: ", spearman, " N-spearman.p: ", spearman.p, " sig:", is_sig_func(spearman.p)))
 	
 }
 
@@ -87,7 +97,7 @@ ranking_linear <- function (train, test)
 	test.pred <- predict(model.lm, test)
 	spearman <- cor(test$MQnextRelease, test.pred, method="spearman")
 	spearman.p <- cor.test(test$MQnextRelease, test.pred, method="spearman", exact=FALSE)$p.value
-	print(paste0("L-spearman: ", spearman, "L-spearman.p: ", spearman.p))
+	print(paste0("L-spearman: ", spearman, " L-spearman.p: ", spearman.p, " sig:", is_sig_func(spearman.p)))
 }
 
 classification_randomForest <- function (train, test) 
@@ -107,7 +117,7 @@ ranking_randomForest <- function (train, test)
 	test.pred <- predict(randomForest, test, type="response")
 	spearman <- cor(test$MQnextRelease, test.pred, method="spearman")
 	spearman.p <- cor.test(test$MQnextRelease, test.pred, method="spearman", exact=FALSE)$p.value
-	print(paste0("F-spearman: ", spearman, "F-spearman.p: ", spearman.p))
+	print(paste0("F-spearman: ", spearman, " F-spearman.p: ", spearman.p, " sig:", is_sig_func(spearman.p)))
 }
 
 classification_glmnb(TrainingData, TestData)
