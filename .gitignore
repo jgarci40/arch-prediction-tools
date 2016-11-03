@@ -8,3 +8,4 @@
 *.lo.out
 *.*_em.out
 *.cf.out
+*.R.orig*

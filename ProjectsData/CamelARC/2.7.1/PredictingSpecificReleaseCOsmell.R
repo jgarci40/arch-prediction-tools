@@ -30,7 +30,7 @@ classification_glmnb <- function (train, test)
 	auc <- performance(pred,"auc")@y.values[[1]]
 	
 	#return(list(auc=auc))
-	print(paste0(" AUC:", auc))
+	print(paste0("N-AUC:", auc))
 	
 }
 
@@ -48,7 +48,7 @@ classification_linear <- function (train, test)
 	test.prob <- predict(model.lm, test, type="response")
 	pred <- prediction(test.prob, test$BCOnextRelease>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
-	print(paste0(" AUC:", auc))	
+	print(paste0("L-AUC:", auc))	
 }
 
 
@@ -60,7 +60,7 @@ classification_randomForest <- function (train, test)
 	test.prob <- predict(randomForest, test, type="response")
 	pred <- prediction(test.prob, test$BCOnextRelease>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
-	print(paste0(" AUC:", auc))	
+	print(paste0("F-AUC:", auc))	
 	
 }
 

@@ -5,7 +5,12 @@ require(randomForest)
 
 
 options(digits=2)
-script.dir <- dirname(sys.frame(1)$ofile)
+# this is wrapped in a tryCatch. The first expression works when source executes, the
+# second expression works when R CMD does it.
+full.fpath <- tryCatch(normalizePath(parent.frame(2)$ofile),  # works when using source
+                       error=function(e) # works when using R CMD
+                         normalizePath(unlist(strsplit(commandArgs()[grep('^--file=', commandArgs())], '='))[2]))
+script.dir <- dirname(full.fpath)
 TrainingData<-read.csv(file.path(script.dir,"TrainingData.csv"),header=T)
 TestData<-read.csv(file.path(script.dir,"TestData.csv"),header=T)
 
@@ -25,7 +30,7 @@ classification_glmnb <- function (train, test)
 	auc <- performance(pred,"auc")@y.values[[1]]
 	
 	#return(list(auc=auc))
-	print(paste0(" AUC:", auc))
+	print(paste0("N-AUC:", auc))
 	
 }
 
@@ -43,7 +48,7 @@ classification_linear <- function (train, test)
 	test.prob <- predict(model.lm, test, type="response")
 	pred <- prediction(test.prob, test$SPFnextRelease>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
-	print(paste0(" AUC:", auc))	
+	print(paste0("L-AUC:", auc))	
 }
 
 
@@ -55,7 +60,7 @@ classification_randomForest <- function (train, test)
 	test.prob <- predict(randomForest, test, type="response")
 	pred <- prediction(test.prob, test$SPFnextRelease>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
-	print(paste0(" AUC:", auc))	
+	print(paste0("F-AUC:", auc))	
 	
 }
 

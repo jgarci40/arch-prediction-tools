@@ -5,7 +5,12 @@ require(randomForest)
 
 
 options(digits=2)
-script.dir <- dirname(sys.frame(1)$ofile)
+# this is wrapped in a tryCatch. The first expression works when source executes, the
+# second expression works when R CMD does it.
+full.fpath <- tryCatch(normalizePath(parent.frame(2)$ofile),  # works when using source
+                       error=function(e) # works when using R CMD
+                         normalizePath(unlist(strsplit(commandArgs()[grep('^--file=', commandArgs())], '='))[2]))
+script.dir <- dirname(full.fpath)
 TrainingData<-read.csv(file.path(script.dir,"TrainingData.csv"),header=T)
 TestData<-read.csv(file.path(script.dir,"TestData.csv"),header=T)
 
@@ -27,7 +32,7 @@ classification_glmnb <- function (train, test)
 	auc <- performance(pred,"auc")@y.values[[1]]
 	
 	#return(list(auc=auc))
-	print(paste0(" AUC:", auc))
+	print(paste0("N-AUC:", auc))
 	
 }
 
@@ -41,7 +46,7 @@ ranking_glmnb <- function (train, test)
 	spearman <- cor(test$BugCountMult, test.pred, method="spearman")
 	spearman.p <- cor.test(test$BugCountMult, test.pred, method="spearman", exact=FALSE)$p.value
 	#return(list(spearman=spearman, spearman.p=spearman.p))
-	print(paste0(" spearman: ", spearman, " spearman.p: ", spearman.p))
+	print(paste0("N-spearman: ", spearman, " N-spearman.p: ", spearman.p))
 	
 }
 
@@ -59,7 +64,7 @@ classification_linear <- function (train, test)
 	test.prob <- predict(model.lm, test, type="response")
 	pred <- prediction(test.prob, test$BugCountMult>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
-	print(paste0(" AUC:", auc))	
+	print(paste0("L-AUC:", auc))	
 }
 
 ranking_linear <- function (train, test) 
@@ -69,7 +74,7 @@ ranking_linear <- function (train, test)
 	test.pred <- predict(model.lm, test)
 	spearman <- cor(test$BugCountMult, test.pred, method="spearman")
 	spearman.p <- cor.test(test$BugCountMult, test.pred, method="spearman", exact=FALSE)$p.value
-	print(paste0(" spearman: ", spearman, " spearman.p: ", spearman.p))
+	print(paste0("L-spearman: ", spearman, " L-spearman.p: ", spearman.p))
 }
 
 
@@ -80,7 +85,7 @@ classification_randomForest <- function (train, test)
 	test.prob <- predict(randomForest, test, type="response")
 	pred <- prediction(test.prob, test$BugCountMult>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
-	print(paste0(" AUC:", auc))	
+	print(paste0("F-AUC:", auc))	
 	
 }
 
@@ -91,7 +96,7 @@ ranking_randomForest <- function (train, test)
 	test.pred <- predict(randomForest, test, type="response")
 	spearman <- cor(test$BugCountMult, test.pred, method="spearman")
 	spearman.p <- cor.test(test$BugCountMult, test.pred, method="spearman", exact=FALSE)$p.value
-	print(paste0(" spearman: ", spearman, " spearman.p: ", spearman.p))
+	print(paste0("F-spearman: ", spearman, " F-spearman.p: ", spearman.p))
 }
 
 
