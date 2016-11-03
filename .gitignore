@@ -6,3 +6,4 @@
 .Rapp.history
 *.dc.out
 *.lo.out
+*.*_em.out
