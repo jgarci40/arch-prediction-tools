@@ -7,3 +7,4 @@
 *.dc.out
 *.lo.out
 *.*_em.out
+*.cf.out
