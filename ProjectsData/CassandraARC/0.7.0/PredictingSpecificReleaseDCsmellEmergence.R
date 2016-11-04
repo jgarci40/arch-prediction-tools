@@ -22,7 +22,7 @@ for (i in 1:nrow(TrainingData))
 
 }	
 TrainingData$newBDC <- sampleVec
-summary(TrainingData$newBDC)
+#summary(TrainingData$newBDC)
 length(which(TrainingData$newBDC == 1))
 length(which(TrainingData$newBDC == 1))/nrow(TrainingData)
 
@@ -35,15 +35,15 @@ for (i in 1:nrow(TestData))
 
 }	
 TestData$newBDC <- sampleVec
-summary(TestData$newBDC)
+#summary(TestData$newBDC)
 length(which(TestData$newBDC == 1))
 length(which(TestData$newBDC == 1))/nrow(TestData)
 
 
-summary(m1 <- glm.nb(newBDC ~ log2(LOC+1) + log2(numberOfCommits+1) + log2(CountClassCoupled+1) + log2(MaxInheritanceTree+1) + log2(PercentLackOfCohesion+1) + log2(SumCyclomatic+1) +log2(coChangedDifferentPackage+1)+log2(coChangedSamePackage+1)+ log2(NumCochangedFiles+1) + BCO + SPF + BDC + BUO +log2(incomingDep+1) + log2(outgoingDep+1) + log2(internalEdges +1) + log2(externalEdges +1) + log2(edgesInto+1) + log2(edgesOutOf+1), data= TrainingData))
+#summary(m1 <- glm.nb(newBDC ~ log2(LOC+1) + log2(numberOfCommits+1) + log2(CountClassCoupled+1) + log2(MaxInheritanceTree+1) + log2(PercentLackOfCohesion+1) + log2(SumCyclomatic+1) +log2(coChangedDifferentPackage+1)+log2(coChangedSamePackage+1)+ log2(NumCochangedFiles+1) + BCO + SPF + BDC + BUO +log2(incomingDep+1) + log2(outgoingDep+1) + log2(internalEdges +1) + log2(externalEdges +1) + log2(edgesInto+1) + log2(edgesOutOf+1), data= TrainingData))
 
-step <- stepAIC(m1, direction="both")
-step$anova # display results
+#step <- stepAIC(m1, direction="both")
+#step$anova # display results
 
 classification_glmnb <- function (train, test) 
 {  
@@ -61,10 +61,10 @@ classification_glmnb <- function (train, test)
 }
 
 
-summary(m1 <- lm(newBDC ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
+#summary(m1 <- lm(newBDC ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
 
-step <- stepAIC(m1, direction="both")
-step$anova # display results
+#step <- stepAIC(m1, direction="both")
+#step$anova # display results
 
 
 classification_linear <- function (train, test) 

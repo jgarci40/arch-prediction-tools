@@ -15,10 +15,10 @@ TrainingData<-read.csv(file.path(script.dir,"TrainingData.csv"),header=T)
 TestData<-read.csv(file.path(script.dir,"TestData.csv"),header=T)
 
 
-summary(m1 <- glm.nb(MQnextRelease ~ log2(LOC+1) + log2(numberOfCommits+1) + log2(CountClassCoupled+1) + log2(MaxInheritanceTree+1) + log2(PercentLackOfCohesion+1) + log2(SumCyclomatic+1) +log2(coChangedDifferentPackage+1)+log2(coChangedSamePackage+1)+ log2(NumCochangedFiles+1) + BDC + BUO +log2(incomingDep+1) + log2(outgoingDep+1) + log2(internalEdges +1) + log2(externalEdges +1) + log2(edgesInto+1) + log2(edgesOutOf+1), data= TrainingData))
+#summary(m1 <- glm.nb(MQnextRelease ~ log2(LOC+1) + log2(numberOfCommits+1) + log2(CountClassCoupled+1) + log2(MaxInheritanceTree+1) + log2(PercentLackOfCohesion+1) + log2(SumCyclomatic+1) +log2(coChangedDifferentPackage+1)+log2(coChangedSamePackage+1)+ log2(NumCochangedFiles+1) + BDC + BUO +log2(incomingDep+1) + log2(outgoingDep+1) + log2(internalEdges +1) + log2(externalEdges +1) + log2(edgesInto+1) + log2(edgesOutOf+1), data= TrainingData))
 
-step <- stepAIC(m1, direction="both")
-step$anova # display results
+#step <- stepAIC(m1, direction="both")
+#step$anova # display results
 
 classification_glmnb <- function (train, test) 
 {  
@@ -46,11 +46,11 @@ ranking_glmnb <- function (train, test)
 
 
 
-summary(m1 <- lm(MQnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
+#summary(m1 <- lm(MQnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
 
 
-step <- stepAIC(m1, direction="both")
-step$anova # display results
+#step <- stepAIC(m1, direction="both")
+#step$anova # display results
 
 
 classification_linear <- function (train, test) 

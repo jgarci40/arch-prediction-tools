@@ -22,7 +22,7 @@ for (i in 1:nrow(TrainingData))
 
 }	
 TrainingData$newBDC <- sampleVec
-summary(TrainingData$newBDC)
+#summary(TrainingData$newBDC)
 length(which(TrainingData$newBDC == 1))
 length(which(TrainingData$newBDC == 1))/nrow(TrainingData)
 
@@ -35,7 +35,7 @@ for (i in 1:nrow(TestData))
 
 }	
 TestData$newBDC <- sampleVec
-summary(TestData$newBDC)
+#summary(TestData$newBDC)
 length(which(TestData$newBDC == 1))
 length(which(TestData$newBDC == 1))/nrow(TestData)
 
