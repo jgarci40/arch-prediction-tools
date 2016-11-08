@@ -2,6 +2,10 @@
 
 This README file describes the prediction model scripts and data sets used for prediction.
 
+## Basic Requirements
+
+You will need R installed with the Rscript command. The scripts have been built and tested on a Mac and utilize gsed (i.e., GNU sed). If you do not have a Mac, you will need to replace gsed with the appropriate GNU sed command (e.g., sed without the "g" in front of it). 
+
 ## Top-Level Directory Structure
 
 The directories within PerRelease/ are structured as follows:
