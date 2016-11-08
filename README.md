@@ -1,8 +1,8 @@
-# Understanding and Using the Architectural Decay Prediction Scripts and Data
+# Using the Architectural Decay Prediction Scripts and Data
 
-This section describes the prediction model scripts and data sets used for prediction.
+This README file describes the prediction model scripts and data sets used for prediction.
 
-## Top-level Directory Structure
+## Top-Level Directory Structure
 
 The directories within PerRelease/ are structured as follows:
 
@@ -16,7 +16,7 @@ PerRelease
 * PerRelease/Plots contains R scripts, data as CSV files, and generated PNG files with box plots illustrating the data
 * PerRelease/ProjectsData contains a variety of data for generating overall CSV data sets in PerRelease/Plots; individual R scripts containing prediction models; data for individual combinations of projects, releases, and recovery techniques; and output that we obtained running our experiments
 
-# Root of PerRelease/ProjectsData
+## Root of PerRelease/ProjectsData
 
 The root of PerRelease/ProjectsData/ contains the following:
 
@@ -60,7 +60,7 @@ PerRelease/ProjectsData
 |-- ./smells_per_release.png # box plots showing the number of smells across releases, projects, and recovery techniques
 ```
 
-# Workflow for Replication
+## Workflow for Replication
 
 When executed, the run\_all\*_prediction.sh script will descend into the sub-directories of the projects and recovery technique, run the individual PredictingSpecificRelease\*.R scripts, and produce the *.[dependent variable abbreviation].out files corresponding to each PredictingSpecificRelease\*.R script. Note that each run\_all\*.sh script corresponds to a different dependent variable to be predicted. For example, consider the following simplified directory contents for the Apache Camel project recovered using ARC:
 
@@ -77,7 +77,7 @@ run\_all\_lo\_em\_prediction.sh will execute PredictingSpecificReleaseLOsmellEme
 
 The create\_smell\_em\_csv.sh script will post-process the \*.[smell]\_em.out files to create a CSV file written to standard output, e.g., SmellEmergence.CSV, which in turn can be saved to Plots/SmellEmergence.csv. Executing Plots/SmellEmergence.R&mdash;after first changing the lines for change<-read.csv() and ggsave(file="") in that script to your PerRelease/ directory&mdash;will allow generation of Plots/SmellEmergence.png. The rest of the run\_all\*.sh, create\*csv.sh, and Plots/\*.R scripts follow the same workflow. 
 
-# Data for a Combination of a Recovery Technique and Project
+## Data for a Recovery Technique and Project
 
 Each [Project Name][Recovery Technique]/ directory (e.g., HBaseARC), contains a set of files similar to the following:
 
