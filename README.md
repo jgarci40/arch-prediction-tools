@@ -108,9 +108,9 @@ The [project name]-[version info]-[recovery technique].txt (e.g., the first 11 f
 
 ModuleName IMC CMC NCF Defects NC LOC CO SF DC LO CBO DIT LCM SCC CMD OMD IMD XMD TCMD TOMD CO\_NextRelease SF\_NextRelease DC\_NextRelease LO\_NextRelease CF\_NextRelease
 
-Basically for each module, we have the values of 19 independent variables for the current release (k) and 6 dependent variables for the next release (k + 1) which are defects, CO_NextRelease, SF_NextRelease DC_NextRelease, LO_NextRelease and CF_NextRelease.
+Basically for each module, we have the values of 19 independent variables for the current release (k) and 6 dependent variables for the next release (k + 1) which are defects, CO\_NextRelease, SF\_NextRelease DC\_NextRelease, LO\_NextRelease and CF\_NextRelease.
 
-ResultsMetrics.txt contains the results of all the versions together and created this file.
+ResultsMetrics.txt contains the results of all the versions together.
 
-The TrainingUpTo-[version info].txt files have the training data up to a certain release which includes the training data. For example for HBase we have the results for the last three releases. TrainingUpTo-0.90.2.txt has the data for the first 8 releases. In the 0.90.2 directory, the TrainingData.csv file includes the data of TrainingUpTo-0.90.2.txt. The TestData.csv file includes the data in hbase-0.90.2-2011-03-27-ArcLowLevel.txt. As another example, in the case of the 0.90.4 directory, the TrainingData.csv file includes the data of TrainingUpTo-0.90.4.txt and TestData.csv is equivalent to hbase-0.90.4-2011-07-24-ArcLowLevel.txt.
+The TrainingUpTo-[version info].txt files have the training data up to a certain release. For example, in the case of HBase, we have the results for the last three releases. TrainingUpTo-0.90.2.txt has the data for the first 8 releases. In the 0.90.2 directory, the TrainingData.csv file includes the data of TrainingUpTo-0.90.2.txt. The TestData.csv file includes the data in hbase-0.90.2-2011-03-27-ArcLowLevel.txt. As another example, in the case of the 0.90.4 directory, the TrainingData.csv file includes the data of TrainingUpTo-0.90.4.txt and TestData.csv is equivalent to hbase-0.90.4-2011-07-24-ArcLowLevel.txt.
 
