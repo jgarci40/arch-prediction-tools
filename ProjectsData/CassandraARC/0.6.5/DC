@@ -1,5 +1,0 @@
-[1] " AUC:0.653846153846154"
-> classification_linear(TrainingData, TestData)
-[1] " AUC:0.653846153846154"
-> classification_randomForest(TrainingData, TestData)
-[1] " AUC:0.865384615384615"

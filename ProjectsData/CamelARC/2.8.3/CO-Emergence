@@ -1,7 +1,0 @@
-> classification_glmnb(TrainingData, TestData)
-[1] " AUC:0.547297297297297"
-> classification_linear(TrainingData, TestData)
-[1] " AUC:0.932432432432432"
-> classification_randomForest(TrainingData, TestData)
-[1] " AUC:0.891891891891892"
-> 
