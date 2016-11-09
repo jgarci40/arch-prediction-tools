@@ -5,11 +5,14 @@ require(randomForest)
 
 
 options(digits=2)
-script.dir <- dirname(sys.frame(1)$ofile)
-#TrainingData<-read.csv(file.path(script.dir,"TrainingData.csv"),header=T)
-#TestData<-read.csv(file.path(script.dir,"TestData.csv"),header=T)
-TrainingData<-read.csv("/Users/joshua/ser/projects/arch_prediction/PerRelease/ProjectsData/HBaseARC/0.90.2/TrainingData.csv",header=T)
-TestData<-read.csv("/Users/joshua/ser/projects/arch_prediction/PerRelease/ProjectsData/HBaseARC/0.90.2/TestData.csv",header=T)
+# this is wrapped in a tryCatch. The first expression works when source executes, the
+# second expression works when R CMD does it.
+full.fpath <- tryCatch(normalizePath(parent.frame(2)$ofile),  # works when using source
+                       error=function(e) # works when using R CMD
+                         normalizePath(unlist(strsplit(commandArgs()[grep('^--file=', commandArgs())], '='))[2]))
+script.dir <- dirname(full.fpath)
+TrainingData<-read.csv(file.path(script.dir,"TrainingData.csv"),header=T)
+TestData<-read.csv(file.path(script.dir,"TestData.csv"),header=T)
 
 sampleVec <- vector(mode="numeric", length = nrow(TrainingData))
 for (i in 1:nrow(TrainingData))
