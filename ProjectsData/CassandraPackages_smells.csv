@@ -1,0 +1,13 @@
+Models,AUC,Smell
+N,0.961538461538462,Pkg-DC
+L,1,Pkg-DC
+F,1,Pkg-DC
+N,0.95,Pkg-LO
+L,1,Pkg-LO
+F,1,Pkg-LO
+N,1,Pkg-DC
+L,1,Pkg-DC
+F,1,Pkg-DC
+N,1,Pkg-LO
+L,0.978260869565217,Pkg-LO
+F,1,Pkg-LO
