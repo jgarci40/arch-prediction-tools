@@ -33,6 +33,19 @@ classification_glmnb <- function (train, test)
 	
 }
 
+classification_unchanged <- function (train, test) 
+{  
+  model.glm.nb <- glm.nb(SPFnextRelease ~ SPF, data=train)	
+  test.prob <- predict(model.glm.nb, test, type="response")		
+  
+  pred <- prediction(test.prob, test$SPFnextRelease>0)
+  auc <- performance(pred,"auc")@y.values[[1]]
+  
+  #return(list(auc=auc))
+  print(paste0("N-AUC:", auc))
+  
+}
+
 
 #summary(m1 <- lm(SPFnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
 
@@ -67,4 +80,5 @@ classification_randomForest <- function (train, test)
 classification_glmnb(TrainingData, TestData)
 classification_linear(TrainingData, TestData)
 classification_randomForest(TrainingData, TestData)
+classification_unchanged(TrainingData, TestData)
 

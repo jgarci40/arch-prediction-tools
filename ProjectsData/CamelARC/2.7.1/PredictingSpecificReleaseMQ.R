@@ -47,6 +47,29 @@ ranking_glmnb <- function (train, test)
 	
 }
 
+classification_unchanged <- function (train, test) 
+{  
+  model.glm.nb <- glm.nb(MQnextRelease ~ MQ, data=train)	
+  test.prob <- predict(model.glm.nb, test, type="response")		
+  
+  pred <- prediction(test.prob, test$MQnextRelease>0.2)
+  auc <- performance(pred,"auc")@y.values[[1]]
+  
+  #return(list(auc=auc))
+  print(paste0("N-AUC:", auc))
+  
+}
+
+ranking_unchanged <- function (train, test) 
+{
+  model.glm.nb <- glm.nb(MQnextRelease ~ MQ, data=train)
+  test.pred <- predict(model.glm.nb, test, type="response")
+  spearman <- cor(test$MQnextRelease, test.pred, method="spearman")
+  spearman.p <- cor.test(test$MQnextRelease, test.pred, method="spearman", exact=FALSE)$p.value
+  #return(list(spearman=spearman, spearman.p=spearman.p))
+  print(paste0("N-spearman: ", spearman, " N-spearman.p: ", spearman.p))
+  
+}
 
 
 #summary(m1 <- lm(MQnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
@@ -104,7 +127,9 @@ ranking_randomForest <- function (train, test)
 classification_glmnb(TrainingData, TestData)
 classification_linear(TrainingData, TestData)
 classification_randomForest(TrainingData, TestData)
+classification_unchanged(TrainingData, TestData)
 
 ranking_glmnb(TrainingData, TestData)
 ranking_linear(TrainingData, TestData)
 ranking_randomForest(TrainingData, TestData)
+ranking_unchanged(TrainingData, TestData)

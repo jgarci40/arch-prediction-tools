@@ -11,3 +11,5 @@
 *.R.orig*
 *.df.out
 *_orig.csv
+*_unchanged.out
+*.R.bak
