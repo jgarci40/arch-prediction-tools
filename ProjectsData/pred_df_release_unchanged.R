@@ -12,8 +12,8 @@ script.dir <- dirname(full.fpath)
 TrainingData<-read.csv(file.path(getwd(),"TrainingData.csv"),header=T)
 TestData<-read.csv(file.path(getwd(),"TestData.csv"),header=T)
 
-classification_nb_unchanged <- function (train, test) 
-{
+classification_glmnb <- function (train, test) 
+{  
   model.glm.nb <- glm.nb(BugCountMult ~ BugCountMult, data=train)	
   test.prob <- predict(model.glm.nb, test, type="response")		
   
@@ -22,9 +22,10 @@ classification_nb_unchanged <- function (train, test)
   
   #return(list(auc=auc))
   print(paste0("N-AUC:", auc))
+  
 }
 
-ranking_nb_unchanged <- function (train, test) 
+ranking_glmnb <- function (train, test) 
 {
   model.glm.nb <- glm.nb(BugCountMult ~ BugCountMult, data=train)
   test.pred <- predict(model.glm.nb, test, type="response")
@@ -32,9 +33,10 @@ ranking_nb_unchanged <- function (train, test)
   spearman.p <- cor.test(test$BugCountMult, test.pred, method="spearman", exact=FALSE)$p.value
   #return(list(spearman=spearman, spearman.p=spearman.p))
   print(paste0("N-spearman: ", spearman, " N-spearman.p: ", spearman.p))
+  
 }
 
-classification_linear_unchanged <- function (train, test) 
+classification_linear <- function (train, test) 
 {
   model.lm <- lm(BugCountMult ~ BugCountMult, data=train)
   test.prob <- predict(model.lm, test, type="response")
@@ -43,7 +45,7 @@ classification_linear_unchanged <- function (train, test)
   print(paste0("L-AUC:", auc))	
 }
 
-ranking_linear_unchanged <- function (train, test) 
+ranking_linear <- function (train, test) 
 {
   model.lm <- lm(BugCountMult ~ BugCountMult, data=train)
   test.pred <- predict(model.lm, test)
@@ -52,12 +54,33 @@ ranking_linear_unchanged <- function (train, test)
   print(paste0("L-spearman: ", spearman, " L-spearman.p: ", spearman.p))
 }
 
+classification_randomForest <- function (train, test) 
+{
+  randomForest <- randomForest(BugCountMult ~ BugCountMult, data= train)
+  test.prob <- predict(randomForest, test, type="response")
+  pred <- prediction(test.prob, test$BugCountMult>0)
+  auc <- performance(pred,"auc")@y.values[[1]]
+  print(paste0("F-AUC:", auc))	
+  
+}
 
-classification_nb_unchanged(TrainingData, TestData)
-ranking_nb_unchanged(TrainingData, TestData)
+ranking_randomForest <- function (train, test) 
+{
+  randomForest <- randomForest(BugCountMult ~ BugCountMult, data= train)
+  test.pred <- predict(randomForest, test, type="response")
+  spearman <- cor(test$BugCountMult, test.pred, method="spearman")
+  spearman.p <- cor.test(test$BugCountMult, test.pred, method="spearman", exact=FALSE)$p.value
+  print(paste0("F-spearman: ", spearman, " F-spearman.p: ", spearman.p))
+}
 
-classification_linear_unchanged(TrainingData, TestData)
-ranking_linear_unchanged(TrainingData, TestData)
+
+classification_glmnb(TrainingData, TestData)
+classification_linear(TrainingData, TestData)
+classification_randomForest(TrainingData, TestData)
+
+ranking_glmnb(TrainingData, TestData)
+ranking_linear(TrainingData, TestData)
+ranking_randomForest(TrainingData, TestData)
 
 
 
