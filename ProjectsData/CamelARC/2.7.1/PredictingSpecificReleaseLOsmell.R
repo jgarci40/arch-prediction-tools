@@ -44,16 +44,13 @@ classification_unchanged <- function (train, test)
   auc <- performance(pred,"auc")@y.values[[1]]
   
   #return(list(auc=auc))
-  print(paste0("N-AUC:", auc))
-  
+  print(paste0("U-AUC:", auc))
 }
-
 
 #summary(m1 <- lm(BUOnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data= TrainingData))
 
 #step <- stepAIC(m1, direction="both")
 #step$anova # display results
-
 
 classification_linear <- function (train, test) 
 {
@@ -65,9 +62,6 @@ classification_linear <- function (train, test)
 	auc <- performance(pred,"auc")@y.values[[1]]
 	print(paste0("L-AUC:", auc))	
 }
-
-
-
 
 classification_randomForest <- function (train, test) 
 {

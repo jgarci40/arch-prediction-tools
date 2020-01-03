@@ -67,7 +67,7 @@ ranking_unchanged <- function (train, test)
   spearman <- cor(test$MQnextRelease, test.pred, method="spearman")
   spearman.p <- cor.test(test$MQnextRelease, test.pred, method="spearman", exact=FALSE)$p.value
   #return(list(spearman=spearman, spearman.p=spearman.p))
-  print(paste0("N-spearman: ", spearman, " N-spearman.p: ", spearman.p))
+  print(paste0("U-spearman: ", spearman, " N-spearman.p: ", spearman.p))
   
 }
 
@@ -120,9 +120,8 @@ ranking_randomForest <- function (train, test)
 	test.pred <- predict(randomForest, test, type="response")
 	spearman <- cor(test$MQnextRelease, test.pred, method="spearman")
 	spearman.p <- cor.test(test$MQnextRelease, test.pred, method="spearman", exact=FALSE)$p.value
-	print(paste0("F-spearman: ", spearman, " F-spearman.p: ", spearman.p))
+	print(paste0("U-spearman: ", spearman, " U-spearman.p: ", spearman.p))
 }
-
 
 classification_glmnb(TrainingData, TestData)
 classification_linear(TrainingData, TestData)

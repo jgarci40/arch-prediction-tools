@@ -86,9 +86,8 @@ classification_unchanged <- function (train, test)
   test.prob <- predict(model.lm, test, type="response")
   pred <- prediction(test.prob, test$newBCO>0)
   auc <- performance(pred,"auc")@y.values[[1]]
-  print(paste0("L-AUC:", auc))	
+  print(paste0("U-AUC:", auc))	
 }
-
 
 classification_randomForest <- function (train, test) 
 {
@@ -97,10 +96,7 @@ classification_randomForest <- function (train, test)
 	pred <- prediction(test.prob, test$newBCO>0)
 	auc <- performance(pred,"auc")@y.values[[1]]
 	print(paste0("F-AUC:", auc))	
-	
 }
-
-
 
 classification_glmnb(TrainingData, TestData)
 classification_linear(TrainingData, TestData)
