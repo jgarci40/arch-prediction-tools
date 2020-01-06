@@ -4,7 +4,7 @@ options(digits = 2)
 
 files <-
   list.files(
-    path = "/Users/joshua/ser/projects/arch_prediction/PerRelease/ProjectsData/",
+    path = "/Users/joshua/ser_home/projects/arch_prediction/PerRelease/ProjectsData/",
     pattern = "*_cf_rank_auc\\.csv",
     full.names = T,
     recursive = FALSE

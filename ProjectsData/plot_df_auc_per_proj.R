@@ -2,7 +2,7 @@ library(ggplot2)
 library(plyr)
 options(digits=2)
 
-files <- list.files(path="/Users/joshua/ser/projects/arch_prediction/PerRelease/ProjectsData/", pattern="*_df_auc\\.csv", full.names=T, recursive=FALSE)
+files <- list.files(path="/Users/joshua/ser_home/projects/arch_prediction/PerRelease/ProjectsData/", pattern="*_df_auc\\.csv", full.names=T, recursive=FALSE)
 lapply(files,function(csv_file) {
   change<-read.csv(csv_file,header=T)
   p <-
