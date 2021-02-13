@@ -1,3 +1,5 @@
+*.R.bak
+*_unchanged.out
 *.co.out
 *.sf.out
 .DS_Store
