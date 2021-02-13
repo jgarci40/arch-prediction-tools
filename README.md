@@ -114,3 +114,48 @@ ResultsMetrics.txt contains the results of all the versions together.
 
 The TrainingUpTo-[version info].txt files have the training data up to a certain release. For example, in the case of HBase, we have the results for the last three releases. TrainingUpTo-0.90.2.txt has the data for the first 8 releases. In the 0.90.2 directory, the TrainingData.csv file includes the data of TrainingUpTo-0.90.2.txt. The TestData.csv file includes the data in hbase-0.90.2-2011-03-27-ArcLowLevel.txt. As another example, in the case of the 0.90.4 directory, the TrainingData.csv file includes the data of TrainingUpTo-0.90.4.txt and TestData.csv is equivalent to hbase-0.90.4-2011-07-24-ArcLowLevel.txt.
 
+# Experimental setup
+
+The following table shows the release date for each version of the systems used in this study.
+
+|**Project Name**|**Version**                    |**Release Date**             |
+|----------------|:-----------------------------:|----------------------------:|
+|apache-camel    |1.6.0                          |2009-02-17                   |
+|apache-camel    |2.0                            |2009-07-26                   |
+|apache-camel    |2.2.0                          |2010-02-16                   |
+|apache-camel    |2.4.0                          |2010-07-16                   |
+|apache-camel    |2.5.0                          |2010-10-31                   |
+|apache-camel    |2.6.0                          |2011-01-29                   |
+|apache-camel    |2.7.1                          |2011-04-13                   |
+|apache-camel    |2.8.0                          |2011-07-25                   |
+|apache-camel    |2.8.3                          |2011-11-22                   |
+|apache-cassandra|0.3.0                          |2009-07-20                   |
+|apache-cassandra|0.4.1                          |2009-10-16                   |
+|apache-cassandra|0.5.1                          |2010-02-23                   |
+|apache-cassandra|0.6.2                          |2010-05-28                   |
+|apache-cassandra|0.6.5                          |2010-08-27                   |
+|apache-cassandra|0.7.0                          |2011-01-10                   |
+|hbase           |0.1.0                          |2008-03-28                   |
+|hbase           |0.1.3                          |2008-06-27                   |
+|hbase           |0.18.0                         |2008-09-21                   |
+|hbase           |0.19.0                         |2009-01-18                   |
+|hbase           |0.19.3                         |2009-05-21                   |
+|hbase           |0.20.2                         |2009-11-10                   |
+|hbase           |0.89.20100621					         |2010-06-25                   |
+|hbase           |0.89.20100924					         |2010-10-05                   |
+|hbase           |0.90.2                         |2011-03-27                   |
+|hbase           |0.90.4                         |2011-07-24                   |
+|hbase           |0.92.0                         |2012-01-23                   |
+|hive            |0.3.0-hadoop-0.17.0-bin		     |2009-04-20                   |
+|hive            |0.4.1-bin						           |2009-11-24                   |
+|hive            |0.5.0-bin						           |2010-02-22                   |
+|hive            |0.6.0-bin						           |2010-10-20                   |
+|hive            |0.7.0-bin						           |2011-03-20                   |
+|hive            |0.8.1-bin						           |2012-01-26                   |
+|apache-openjpa  |1.0.1							             |2007-11-09                   |
+|apache-openjpa  |1.0.3							             |2008-02-18                   |
+|apache-openjpa  |1.1.0							             |2008-05-22                   |
+|apache-openjpa  |1.2.0							             |2008-08-14                   |
+|apache-openjpa  |2.0.0-M3						           |2009-10-12                   |
+|apache-openjpa  |2.0.1							             |2010-08-30                   |
+
