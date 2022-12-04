@@ -1,0 +1,17 @@
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.regionserver.metrics 1
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.master.metrics 0
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.thrift.generated 1
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.regionserver 26
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.regionserver.transactional 1
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.io 14
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.ipc 1
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.rest 4
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.regionserver.tableindexed 1
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.client.tableindexed 3
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.util 2
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.thrift 2
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase 17
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.mapred 2
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.filter 2
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.master 22
+Hbase-hbase-0.19.0_pkgs-org.apache.hadoop.hbase.client 13

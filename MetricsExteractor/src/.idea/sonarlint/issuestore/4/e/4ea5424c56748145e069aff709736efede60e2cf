@@ -1,0 +1,31 @@
+
+g
+java:S2095C"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(—€Óøÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(ÿËüø
+E
+java:S3740"/Provide the parametrized type for this generic.(ÿËüø
+E
+java:S3740D"/Provide the parametrized type for this generic.(à‹
+E
+java:S3740G"/Provide the parametrized type for this generic.(í™Í¬
+J
+java:S3740J"/Provide the parametrized type for this generic.(éÛÓªûÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.nio.file.Files'.(‚ƒü
+O
+java:S1118
+":Add a private constructor to hide the implicit public one.(ßÕ²
+Q	java:S125"<This block of commented-out lines of code should be removed.(İ¬›À
+o
+java:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(çïÎÊ
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(Û÷–œ
+Z
+java:S2147T"DCombine this catch with the one at line 82, which has the same body.(Ãôş•
+N	java:S1066"9Replace this use of System.out or System.err by a logger.(ñæÂ²
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(ÎøÛÁùÿÿÿÿ
+S	java:S106;"9Replace this use of System.out or System.err by a logger.(™êîıÿÿÿÿ
+Q	java:S125B"<This block of commented-out lines of code should be removed.(Éè¾ó
+Q	java:S125I"<This block of commented-out lines of code should be removed.(¶İÈö
+E
+java:S20934"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ

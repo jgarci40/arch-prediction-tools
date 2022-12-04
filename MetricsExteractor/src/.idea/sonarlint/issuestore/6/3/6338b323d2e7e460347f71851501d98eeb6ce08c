@@ -1,0 +1,244 @@
+
+h
+java:S2095İ"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(—€Óøÿÿÿÿ
+F
+java:S3740Î"/Provide the parametrized type for this generic.(¶“½®
+K
+java:S3740Ğ"/Provide the parametrized type for this generic.(¾äºãıÿÿÿÿ
+E
+java:S3740ä"/Provide the parametrized type for this generic.(ó€ƒL
+K
+java:S3740æ"/Provide the parametrized type for this generic.(ëçµ¸øÿÿÿÿ
+F
+java:S3740Ç"/Provide the parametrized type for this generic.(¶“½®
+K
+java:S3740É"/Provide the parametrized type for this generic.(¾äºãıÿÿÿÿ
+E
+java:S3740ã"/Provide the parametrized type for this generic.(ó€ƒL
+K
+java:S3740å"/Provide the parametrized type for this generic.(ëçµ¸øÿÿÿÿ
+F
+java:S3740¥"/Provide the parametrized type for this generic.(±ëÆ¥
+K
+java:S3740¼"/Provide the parametrized type for this generic.(ş¸†Ñûÿÿÿÿ
+F
+java:S3740Ç"/Provide the parametrized type for this generic.(•ÏÅ
+K
+java:S3740"/Provide the parametrized type for this generic.(ş¸†Ñûÿÿÿÿ
+K
+java:S3740À"/Provide the parametrized type for this generic.(ş¸†Ñûÿÿÿÿ
+F
+java:S3740Ş"/Provide the parametrized type for this generic.(°Äè¤
+b
+java:S1192ê"FDefine a constant instead of duplicating this literal ".java" 4 times.(Ú‰ª•øÿÿÿÿ
+U
+java:S1155”">Use isEmpty() to check whether the collection is empty or not.(•Œ›ç
+U
+java:S1155ƒ">Use isEmpty() to check whether the collection is empty or not.(·ÏÁ
+Z
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(Ì¹€Àøÿÿÿÿ
+k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÕ½Îøÿÿÿÿ
+k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÕ½Îøÿÿÿÿ
+k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÕ½Îøÿÿÿÿ
+k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÕ½Îøÿÿÿÿ
+k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œÕ½Îøÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Úç¡€ÿÿÿÿÿ
+z
+java:S1450#"_Remove the "allFilesHaveBugs" field and declare it as a local variable in the relevant methods.(Åáëøÿÿÿÿ
+u
+java:S1450"ZRemove the "authManager" field and declare it as a local variable in the relevant methods.(²èşÿÿÿÿÿ
+v
+java:S1450"[Remove the "bugEntryList" field and declare it as a local variable in the relevant methods.(î”Ã÷ÿÿÿÿÿ
+ƒ
+java:S1450'"hRemove the "coChangedSamePackageCount" field and declare it as a local variable in the relevant methods.(ßÚı¬ÿÿÿÿÿ
+{
+java:S1450."eRemove the "numCoChangedSubsystems" field and declare it as a local variable in the relevant methods.(ñÀĞÈ
+
+java:S1450/"kRemove the "numCoChangedSubsystemsUnique" field and declare it as a local variable in the relevant methods.(˜êƒ
+
+java:S1450$"fRemove the "singleChangedFilesCount" field and declare it as a local variable in the relevant methods.(æÍ·…øÿÿÿÿ
+}
+java:S1450="bRemove the "subsystemFileLocStr" field and declare it as a local variable in the relevant methods.(•¡Å¸ÿÿÿÿÿ
+k
+java:S1450"URemove the "svnUrl" field and declare it as a local variable in the relevant methods.(—Ô«•
+8
+java:S1118E"Hide this public constructor.(¬§¸¯ùÿÿÿÿ
+V	java:S1252"<This block of commented-out lines of code should be removed.(½¼Íüÿÿÿÿ
+L
+java:S3010F"1Remove this assignment of "totalNumChangedFiles".(ïíÿÿÿÿÿ
+L
+java:S3010G"6Remove this assignment of "totalNumChangedFilesG0L30".(ñ’³ğ
+B
+java:S3010I",Remove this assignment of "totalNumCommits".(Í—¦
+V	java:S125D"<This block of commented-out lines of code should be removed.(í¬Æşÿÿÿÿ
+Q	java:S125H"<This block of commented-out lines of code should be removed.(ÍŞíË
+Q	java:S125O"<This block of commented-out lines of code should be removed.(ÚÇ¬¯
+V	java:S125W"<This block of commented-out lines of code should be removed.(¡¹ƒËøÿÿÿÿ
+V	java:S125]"<This block of commented-out lines of code should be removed.(ø‚´Çúÿÿÿÿ
+V	java:S125b"<This block of commented-out lines of code should be removed.(”ĞŸ¶şÿÿÿÿ
+o
+java:S2293d"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ã™Õ‹
+t
+java:S2293e"YReplace the type specification in this constructor call with the diamond operator ("<>").(àÀ¯ßûÿÿÿÿ
+
+java:S2178g"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(â—Ì–úÿÿÿÿ
+N	java:S106n"9Replace this use of System.out or System.err by a logger.(ïˆ¯„
+P	java:S125q"<This block of commented-out lines of code should be removed.(™¯¥ 
+V	java:S125u"<This block of commented-out lines of code should be removed.(‘äÇ¯ıÿÿÿÿ
+P	java:S125y"<This block of commented-out lines of code should be removed.(†°º+
+T
+java:S1874"7Remove this use of "parseURIDecoded"; it is deprecated.(¸œäÄ8±é“¶0
+h
+java:S1874€"JRemove this use of "createDefaultAuthenticationManager"; it is deprecated.(–´è´8´é“¶0
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(Šü·øùÿÿÿÿ
+O	java:S106„"9Replace this use of System.out or System.err by a logger.(éÈ¢ú
+O	java:S106‡"9Replace this use of System.out or System.err by a logger.(‹Ñ÷î
+O	java:S106Š"9Replace this use of System.out or System.err by a logger.(Õ£Í™
+R	java:S125"<This block of commented-out lines of code should be removed.(Œ‚Ô
+W	java:S125”"<This block of commented-out lines of code should be removed.(¥«Å”úÿÿÿÿ
+W	java:S125–"<This block of commented-out lines of code should be removed.(›Ÿ£Íûÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(Å˜ Ÿüÿÿÿÿ
+W	java:S125¦"<This block of commented-out lines of code should be removed.(÷º”³øÿÿÿÿ
+R	java:S125¨"<This block of commented-out lines of code should be removed.(Šå“ë
+O	java:S106®"9Replace this use of System.out or System.err by a logger.(áŸø¾
+Q
+java:S1854ß"5Remove this useless assignment to local variable "s".(Á˜Úëüÿÿÿÿ
+n
+java:S3776³"RRefactor this method to reduce its Cognitive Complexity from 61 to the 15 allowed.(œİûÊüÿÿÿÿ
+T	java:S106Ä"9Replace this use of System.out or System.err by a logger.(×Æµßøÿÿÿÿ
+R	java:S125¿"<This block of commented-out lines of code should be removed.(Ãî«ª
+Q	java:S125Å"<This block of commented-out lines of code should be removed.(ØÔ4
+p
+java:S2293Ì"YReplace the type specification in this constructor call with the diamond operator ("<>").( ÚË
+W	java:S125Õ"<This block of commented-out lines of code should be removed.(‰­üÿÿÿÿ
+p
+java:S2293Ù"YReplace the type specification in this constructor call with the diamond operator ("<>").(ù×™
+u
+java:S2293Û"YReplace the type specification in this constructor call with the diamond operator ("<>").(£Éùÿÿÿÿ
+R	java:S125Ü"<This block of commented-out lines of code should be removed.(û‡ØÈ
+W	java:S125à"<This block of commented-out lines of code should be removed.(¿‹±òıÿÿÿÿ
+U
+java:S1905ç"2Remove this unnecessary cast to "SVNLogEntryPath".(‘„ë»ÿÿÿÿÿ8äé“¶0
+W	java:S125è"<This block of commented-out lines of code should be removed.(ÈØú§úÿÿÿÿ
+R	java:S125í"<This block of commented-out lines of code should be removed.(®ïÇ
+W	java:S125ğ"<This block of commented-out lines of code should be removed.(ïïãÃøÿÿÿÿ
+W	java:S125ö"<This block of commented-out lines of code should be removed.(ïïãÃøÿÿÿÿ
+R	java:S125ø"<This block of commented-out lines of code should be removed.(Ì•½ú
+W	java:S125ú"<This block of commented-out lines of code should be removed.(ïïãÃøÿÿÿÿ
+R	java:S125ı"<This block of commented-out lines of code should be removed.(Ú°à¬
+W	java:S125„"<This block of commented-out lines of code should be removed.(ïïãÃøÿÿÿÿ
+R	java:S125†"<This block of commented-out lines of code should be removed.(±ƒÅ•
+R	java:S125“"<This block of commented-out lines of code should be removed.(¥´Ÿå
+Q
+java:S1854İ"5Remove this useless assignment to local variable "s".(Á˜Úëüÿÿÿÿ
+i
+java:S3776©"RRefactor this method to reduce its Cognitive Complexity from 49 to the 15 allowed.(“ŒĞø
+p
+java:S2293ª"YReplace the type specification in this constructor call with the diamond operator ("<>").(¼çØõ
+u
+java:S2293«"YReplace the type specification in this constructor call with the diamond operator ("<>").(©Àº‡ÿÿÿÿÿ
+T	java:S106À"9Replace this use of System.out or System.err by a logger.(Ü·úÛøÿÿÿÿ
+R	java:S125º"<This block of commented-out lines of code should be removed.(¹¹‰ú
+W	java:S125Í"<This block of commented-out lines of code should be removed.(ö˜Ãèùÿÿÿÿ
+W	java:S125Ğ"<This block of commented-out lines of code should be removed.(’ìØîşÿÿÿÿ
+}
+java:S2178Ö"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(§Ğ—Ò
+p
+java:S2293Ù"YReplace the type specification in this constructor call with the diamond operator ("<>").(ù×™
+u
+java:S2293Ú"YReplace the type specification in this constructor call with the diamond operator ("<>").(£Éùÿÿÿÿ
+R	java:S125Û"<This block of commented-out lines of code should be removed.(û‡ØÈ
+W	java:S125Ş"<This block of commented-out lines of code should be removed.(¿‹±òıÿÿÿÿ
+U
+java:S1905æ"2Remove this unnecessary cast to "SVNLogEntryPath".(‘„ë»ÿÿÿÿÿ8ê“¶0
+W	java:S125ç"<This block of commented-out lines of code should be removed.(ÈØú§úÿÿÿÿ
+Q	java:S125ó"<This block of commented-out lines of code should be removed.(¹üò=
+R	java:S125õ"<This block of commented-out lines of code should be removed.(Ì•½ú
+R	java:S125ú"<This block of commented-out lines of code should be removed.(±ƒÅ•
+R	java:S125‚"<This block of commented-out lines of code should be removed.(¥´Ÿå
+R	java:S125‡"<This block of commented-out lines of code should be removed.(´˜Ï
+W	java:S125‘"<This block of commented-out lines of code should be removed.(Ã‹ô¯ûÿÿÿÿ
+W	java:S125™"<This block of commented-out lines of code should be removed.(ëÊÙÚÿÿÿÿÿ
+R	java:S125›"<This block of commented-out lines of code should be removed.(à©Š“
+W
+java:S1854Ê";Remove this useless assignment to local variable "tempStr".(Œ”´æøÿÿÿÿ
+n
+java:S3776²"RRefactor this method to reduce its Cognitive Complexity from 68 to the 15 allowed.(°ƒÎ»ûÿÿÿÿ
+u
+java:S2293³"YReplace the type specification in this constructor call with the diamond operator ("<>").(°É÷Êÿÿÿÿÿ
+u
+java:S2293´"YReplace the type specification in this constructor call with the diamond operator ("<>").(ğ›Á¸ÿÿÿÿÿ
+u
+java:S2293µ"YReplace the type specification in this constructor call with the diamond operator ("<>").(…’‹³ıÿÿÿÿ
+u
+java:S2293¶"YReplace the type specification in this constructor call with the diamond operator ("<>").( Ğ«ƒùÿÿÿÿ
+o
+java:S2293·"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸²š
+u
+java:S2293¸"YReplace the type specification in this constructor call with the diamond operator ("<>").(›Ò« ùÿÿÿÿ
+u
+java:S2293¹"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ìé“±úÿÿÿÿ
+p
+java:S2293º"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğş¦
+O	java:S106¿"9Replace this use of System.out or System.err by a logger.(š’Şå
+W	java:S125Â"<This block of commented-out lines of code should be removed.(‹ĞÉˆşÿÿÿÿ
+R	java:S125Ë"<This block of commented-out lines of code should be removed.(¡ëØâ
+R	java:S125Ó"<This block of commented-out lines of code should be removed.(ÿì‘
+T	java:S106Ú"9Replace this use of System.out or System.err by a logger.(×÷ÿòúÿÿÿÿ
+R	java:S125Ù"<This block of commented-out lines of code should be removed.(ÜÍ‰ú
+T	java:S106Ü"9Replace this use of System.out or System.err by a logger.(Îãßâÿÿÿÿÿ
+W	java:S125ø"<This block of commented-out lines of code should be removed.(‹ø›ûùÿÿÿÿ
+W	java:S125Œ"<This block of commented-out lines of code should be removed.(ÑËø½ûÿÿÿÿ
+R	java:S125”"<This block of commented-out lines of code should be removed.(‰“ÎË
+R	java:S125–"<This block of commented-out lines of code should be removed.(Á­¸
+o
+java:S2293š"YReplace the type specification in this constructor call with the diamond operator ("<>").(š¨¦z
+u
+java:S2293›"YReplace the type specification in this constructor call with the diamond operator ("<>").(ëÚ‰üÿÿÿÿ
+W	java:S125œ"<This block of commented-out lines of code should be removed.(ùàÊ€ÿÿÿÿÿ
+W	java:S125 "<This block of commented-out lines of code should be removed.(ŸÉü•úÿÿÿÿ
+Q	java:S125£"<This block of commented-out lines of code should be removed.(©µ‰=
+W	java:S125§"<This block of commented-out lines of code should be removed.(‹ø›ûùÿÿÿÿ
+R	java:S125­"<This block of commented-out lines of code should be removed.(‰“ÎË
+R	java:S125¯"<This block of commented-out lines of code should be removed.(Á­¸
+T	java:S106Ä"9Replace this use of System.out or System.err by a logger.(ƒ´ÍÏûÿÿÿÿ
+O	java:S106Å"9Replace this use of System.out or System.err by a logger.(ú•€Ë
+n
+java:S3776Ê"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(íß÷ƒùÿÿÿÿ
+\
+java:S2147š"ECombine this catch with the one at line 664, which has the same body.(Ãôş•
+T	java:S106Ó"9Replace this use of System.out or System.err by a logger.(ÎøÛÁùÿÿÿÿ
+T	java:S106Õ"9Replace this use of System.out or System.err by a logger.(™êîıÿÿÿÿ
+R	java:S125Ü"<This block of commented-out lines of code should be removed.(Éè¾ó
+W	java:S125ß"<This block of commented-out lines of code should be removed.(ØÖÁıÿÿÿÿ
+W	java:S125ä"<This block of commented-out lines of code should be removed.(‘Š”ëùÿÿÿÿ
+W	java:S125÷"<This block of commented-out lines of code should be removed.(û¨õ˜şÿÿÿÿ
+W	java:S125Œ"<This block of commented-out lines of code should be removed.(œÏ‹’üÿÿÿÿ
+F
+java:S2093Í"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+B
+java:S1481ß"&Remove this unused "s" local variable.(Á˜Úëüÿÿÿÿ
+B
+java:S1481İ"&Remove this unused "s" local variable.(Á˜Úëüÿÿÿÿ
+H
+java:S1481Ê",Remove this unused "tempStr" local variable.(Œ”´æøÿÿÿÿ
+@
+java:S1068"*Remove this unused "svnUrl" private field.(—Ô«•
+O
+java:S1068 "4Remove this unused "entryListNotZero" private field.(óˆÎ•øÿÿÿÿ
+U
+java:S1068&"?Remove this unused "allPackagesBugCountMultiple" private field.(´´àò
+[
+java:S1068+"ERemove this unused "coChangedDifferentPackageCountNew" private field.(Û¾Ò
+P
+java:S1068.":Remove this unused "numCoChangedSubsystems" private field.(ñÀĞÈ
+V
+java:S1068/"@Remove this unused "numCoChangedSubsystemsUnique" private field.(˜êƒ
+S
+java:S10681"=Remove this unused "totalNumChangedFilesG0L30" private field.(ÄÏˆ¹
+R
+java:S10684"7Remove this unused "totalNumSamePackage" private field.(˜¢³ñüÿÿÿÿ
+L
+java:S1068<"1Remove this unused "endDateStrBug" private field.(ı‰§™øÿÿÿÿ
+@
+java:S1144¿"*Remove this unused private "print" method.(Â¼™d

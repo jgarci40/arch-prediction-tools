@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="svnkit-1.7.5-v1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../lib/svnkit-1.7.5-v1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

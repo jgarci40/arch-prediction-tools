@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="org.tmatesoft.svnkit:svnkit:1.7.5-v1" type="repository">
+    <properties maven-id="org.tmatesoft.svnkit:svnkit:1.7.5-v1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/tmatesoft/svnkit/svnkit/1.7.5-v1/svnkit-1.7.5-v1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/de/regnis/q/sequence/sequence-library/1.0.2/sequence-library-1.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/tmatesoft/sqljet/sqljet/1.1.4/sqljet-1.1.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/trilead/trilead-ssh2/1.0.0-build215/trilead-ssh2-1.0.0-build215.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
