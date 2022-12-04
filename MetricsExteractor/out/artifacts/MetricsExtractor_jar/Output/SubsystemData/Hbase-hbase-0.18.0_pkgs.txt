@@ -1,7 +1,0 @@
-org.apache.hadoop.hbase.ipc 0 1 2 3 3 304 0 0 1 0 21 1 85 22 7 4 1 130 67 63 0 0 1 0 0.062 9/21/2008
-org.apache.hadoop.hbase.util 8 14 125 10 24 1141 0 0 1 0 124 12 68 31 11 6 14 478 173 305 0 0 1 1 0.071 9/21/2008
-org.apache.hadoop.hbase.filter 6 6 114 1 12 589 0 0 1 0 67 6 50 17 10 4 9 131 41 90 0 0 1 0 0.133 9/21/2008
-org.apache.hadoop.hbase.rest 12 3 47 8 17 980 0 0 0 0 106 11 97 18 0 4 9 184 10 174 0 0 0 0 0.087 9/21/2008
-org.apache.hadoop.hbase.thrift 2 4 36 1 6 550 0 0 0 0 23 2 0 11 0 4 0 41 2 39 0 0 0 0 0.0 9/21/2008
-org.apache.hadoop.hbase.io 6 4 31 5 15 369 0 0 1 1 55 4 54 13 13 3 9 343 187 156 0 0 1 1 0.064 9/21/2008
-org.apache.hadoop.hbase.thrift.generated 12 10 115 1 14 10218 0 0 0 0 42 20 50 24 1 0 2 471 282 189 0 0 0 0 0.008 9/21/2008
