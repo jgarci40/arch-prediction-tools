@@ -1,0 +1,18 @@
+org.apache.cassandra.io bdc
+org.apache.cassandra.db.marshal bdc
+org.apache.cassandra.service buo
+org.apache.cassandra.service bdc
+org.apache.cassandra.net bdc
+org.apache.cassandra.config buo
+org.apache.cassandra.config bdc
+org.apache.cassandra.db bdc
+org.apache.cassandra.net.sink bdc
+org.apache.cassandra.db.filter bdc
+org.apache.cassandra.concurrent bdc
+org.apache.cassandra.net.io bdc
+org.apache.cassandra.dht bdc
+org.apache.cassandra.gms bdc
+org.apache.cassandra.locator bdc
+org.apache.cassandra.utils buo
+org.apache.cassandra.utils bdc
+

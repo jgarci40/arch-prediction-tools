@@ -1,0 +1,14 @@
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.thrift.generated 1
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.regionserver 94
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.regionserver.transactional 4
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.io 5
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.ipc 3
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.rest 8
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.util 10
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase 28
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.thrift 1
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.master 29
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.filter 1
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.util.migration.v5 0
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.client.transactional 0
+Hbase-hbase-0.18.0_pkgs-org.apache.hadoop.hbase.client 21

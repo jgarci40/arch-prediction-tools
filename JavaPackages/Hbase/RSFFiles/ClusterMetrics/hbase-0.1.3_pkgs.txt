@@ -1,0 +1,13 @@
+org.apache.hadoop.hbase.thrift.generated 1 0 0 371 226 145
+org.apache.hadoop.hbase.io 3 2 4 179 58 121
+org.apache.hadoop.hbase.ipc 1 1 0 41 7 34
+org.apache.hadoop.hbase.hql 3 5 60 368 38 330
+org.apache.hadoop.hbase.rest 0 2 7 146 8 138
+org.apache.hadoop.hbase.hql.generated 1 1 10 82 9 73
+org.apache.hadoop.hbase.util 3 2 6 308 54 254
+org.apache.hadoop.hbase 7 6 169 1236 469 767
+org.apache.hadoop.hbase.thrift 0 2 0 32 2 30
+org.apache.hadoop.hbase.mapred 0 2 16 260 7 253
+org.apache.hadoop.hbase.filter 4 1 7 116 24 92
+org.apache.hadoop.hbase.hql.formatter 2 1 0 29 5 24
+

@@ -1,0 +1,132 @@
+> summary(m1 <- randomForest(MQnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data=change))
+                Length Class  Mode     
+call              3    -none- call     
+type              1    -none- character
+predicted       223    -none- numeric  
+mse             500    -none- numeric  
+rsq             500    -none- numeric  
+oob.times       223    -none- numeric  
+importance       19    -none- numeric  
+importanceSD      0    -none- NULL     
+localImportance   0    -none- NULL     
+proximity         0    -none- NULL     
+ntree             1    -none- numeric  
+mtry              1    -none- numeric  
+forest           11    -none- list     
+coefs             0    -none- NULL     
+y               223    -none- numeric  
+test              0    -none- NULL     
+inbag             0    -none- NULL     
+terms             3    terms  call     
+> print(m1) 
+
+Call:
+ randomForest(formula = MQnextRelease ~ LOC + numberOfCommits +      CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion +      SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage +      coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep +      outgoingDep + internalEdges + externalEdges + edgesInto +      edgesOutOf, data = change) 
+               Type of random forest: regression
+                     Number of trees: 500
+No. of variables tried at each split: 6
+
+          Mean of squared residuals: 0.001367191
+                    % Var explained: 73.73
+> importance(m1)
+                          IncNodePurity
+LOC                         0.053108062
+numberOfCommits             0.041202982
+CountClassCoupled           0.050960983
+MaxInheritanceTree          0.045467568
+PercentLackOfCohesion       0.030512426
+SumCyclomatic               0.033769500
+NumCochangedFiles           0.071444075
+coChangedDifferentPackage   0.026474235
+coChangedSamePackage        0.067888045
+BCO                         0.000000000
+SPF                         0.000000000
+BDC                         0.005638252
+BUO                         0.006622976
+incomingDep                 0.033908817
+outgoingDep                 0.033407347
+internalEdges               0.403161898
+externalEdges               0.067019166
+edgesInto                   0.062919867
+edgesOutOf                  0.096015500
+> 
+> 
+> summary(m1 <- glm.nb(MQnextRelease ~ log2(internalEdges + 1) + log2(externalEdges + 1), data=change))
+
+Call:
+glm.nb(formula = MQnextRelease ~ log2(internalEdges + 1) + log2(externalEdges + 
+    1), data = change, init.theta = 42300.44324, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.8470  -0.4919   0.4587   0.6638   1.0070  
+
+Coefficients:
+                        Estimate Std. Error z value Pr(>|z|)   
+(Intercept)              -0.8758     1.8258  -0.480  0.63147   
+log2(internalEdges + 1)   0.6778     0.2618   2.589  0.00962 **
+log2(externalEdges + 1)  -0.5271     0.3412  -1.545  0.12231   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(42300.44) family taken to be 1)
+
+    Null deviance: 94.570  on 222  degrees of freedom
+Residual deviance: 83.566  on 220  degrees of freedom
+AIC: 112.23
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  42300 
+          Std. Err.:  1082809 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -104.226 
+There were 50 or more warnings (use warnings() to see the first 50)
+> Dsquared(m1) #amount of deviance accounted
+[1] 0.1163494
+> 
+> 
+> summary(m1 <- lm(MQnextRelease ~ numberOfCommits + CountClassCoupled + MaxInheritanceTree + SumCyclomatic + NumCochangedFiles + coChangedSamePackage + BDC + BUO + incomingDep + outgoingDep + internalEdges + edgesInto, data=change))
+
+Call:
+lm(formula = MQnextRelease ~ numberOfCommits + CountClassCoupled + 
+    MaxInheritanceTree + SumCyclomatic + NumCochangedFiles + 
+    coChangedSamePackage + BDC + BUO + incomingDep + outgoingDep + 
+    internalEdges + edgesInto, data = change)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.097507 -0.028938 -0.004434  0.025157  0.168888 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)           4.454e-02  6.579e-03   6.770 1.27e-10 ***
+numberOfCommits       5.759e-04  2.867e-04   2.009 0.045796 *  
+CountClassCoupled    -2.617e-04  7.921e-05  -3.304 0.001120 ** 
+MaxInheritanceTree    2.478e-03  4.233e-04   5.854 1.83e-08 ***
+SumCyclomatic         1.264e-04  5.015e-05   2.521 0.012452 *  
+NumCochangedFiles    -5.928e-05  3.017e-05  -1.965 0.050736 .  
+coChangedSamePackage -8.016e-04  4.314e-04  -1.858 0.064538 .  
+BDC                   1.172e-02  7.373e-03   1.590 0.113374    
+BUO                  -4.874e-02  1.289e-02  -3.781 0.000203 ***
+incomingDep           2.271e-03  8.922e-04   2.546 0.011615 *  
+outgoingDep          -2.065e-03  1.178e-03  -1.753 0.081116 .  
+internalEdges         3.008e-03  2.194e-04  13.712  < 2e-16 ***
+edgesInto            -1.582e-04  2.963e-05  -5.340 2.41e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.04022 on 210 degrees of freedom
+Multiple R-squared:  0.7073,	Adjusted R-squared:  0.6906 
+F-statistic: 42.29 on 12 and 210 DF,  p-value: < 2.2e-16
+
+> rankingFunction(change, 3,"lm")
+[1] "lm spearman: 0.783084711605566 spearman.p: 1.3509305499592e-11"
+> rankingFunction(change, 3,"glm.nb")
+[1] "glm.nb spearman: 0.888067463210855 spearman.p: 6.67456412990575e-19"
+There were 50 or more warnings (use warnings() to see the first 50)
+> rankingFunction(change, 3,"randomForest")
+[1] "randomForest spearman: 0.845482880615044 spearman.p: 7.86716430969941e-16"
+> 

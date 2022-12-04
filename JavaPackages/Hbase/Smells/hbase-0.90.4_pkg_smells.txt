@@ -1,0 +1,27 @@
+org.apache.hadoop.hbase.ipc bdc
+org.apache.hadoop.hbase.io.hfile bdc
+org.apache.hadoop.hbase.util buo
+org.apache.hadoop.hbase.util bdc
+org.apache.hadoop.hbase.regionserver buo
+org.apache.hadoop.hbase.regionserver bdc
+org.apache.hadoop.hbase.regionserver.handler bdc
+org.apache.hadoop.hbase.master.handler bdc
+org.apache.hadoop.hbase.client buo
+org.apache.hadoop.hbase.client bdc
+org.apache.hadoop.hbase.executor bdc
+org.apache.hadoop.hbase.regionserver.wal bdc
+org.apache.hadoop.hbase.replication.master bdc
+org.apache.hadoop.hbase.replication bdc
+org.apache.hadoop.hbase.regionserver.metrics bdc
+org.apache.hadoop.hbase.catalog bdc
+org.apache.hadoop.hbase.filter bdc
+org.apache.hadoop.hbase.replication.regionserver bdc
+org.apache.hadoop.hbase.master buo
+org.apache.hadoop.hbase.master bdc
+org.apache.hadoop.hbase.master.metrics bdc
+org.apache.hadoop.hbase.io bdc
+org.apache.hadoop.hbase buo
+org.apache.hadoop.hbase bdc
+org.apache.hadoop.hbase.zookeeper bdc
+org.apache.hadoop.hbase.metrics bdc
+

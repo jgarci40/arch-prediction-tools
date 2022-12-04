@@ -1,0 +1,8 @@
+org.apache.hadoop.hbase.ipc 0 1 11 5 4 245 0 0 1 0 20 1 78 26 1 1 0 41 7 34 0 0 1 0 0.015
+org.apache.hadoop.hbase.mapred 33 23 351 11 49 584 0 0 0 0 98 25 50 11 0 2 16 260 7 253 0 0 0 0 0.11
+org.apache.hadoop.hbase.util 24 31 183 21 49 1179 0 0 1 0 123 11 0 18 3 2 6 308 54 254 0 0 1 0 0.055
+org.apache.hadoop.hbase.filter 24 8 175 0 34 650 0 0 1 0 55 7 52 23 4 1 7 116 24 92 0 0 1 0 0.121
+org.apache.hadoop.hbase.rest 8 12 114 18 23 739 0 0 0 0 74 7 97 16 0 2 7 146 8 138 0 0 0 0 0.089
+org.apache.hadoop.hbase.thrift 2 13 122 5 19 501 0 0 0 0 16 2 0 11 0 2 0 32 2 30 0 0 0 0 0.0
+org.apache.hadoop.hbase.io 10 20 158 17 26 678 0 0 1 0 77 8 43 10 3 2 4 179 58 121 0 0 1 1 0.05
+org.apache.hadoop.hbase.thrift.generated 10 15 156 11 15 6849 0 0 0 0 26 18 40 10 1 0 0 371 226 145 0 0 0 0 0.008

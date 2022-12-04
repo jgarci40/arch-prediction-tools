@@ -1,0 +1,8 @@
+org.apache.hadoop.hbase.util,org.apache.hadoop.hbase.util,1.0
+org.apache.hadoop.hbase.filter,org.apache.hadoop.hbase.filter,1.0
+org.apache.hadoop.hbase.io,org.apache.hadoop.hbase.io,0.777777777778
+org.apache.hadoop.hbase.thrift.generated,org.apache.hadoop.hbase.thrift.generated,1.0
+org.apache.hadoop.hbase.rest,org.apache.hadoop.hbase.rest,1.0
+org.apache.hadoop.hbase.ipc,org.apache.hadoop.hbase.ipc,1.0
+org.apache.hadoop.hbase.mapred,org.apache.hadoop.hbase.mapred,1.0
+org.apache.hadoop.hbase.thrift,org.apache.hadoop.hbase.thrift,1.0

@@ -1,0 +1,141 @@
+> 
+> summary(m1 <- randomForest(newBDC ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data=change))
+                Length Class  Mode     
+call              3    -none- call     
+type              1    -none- character
+predicted       193    -none- numeric  
+mse             500    -none- numeric  
+rsq             500    -none- numeric  
+oob.times       193    -none- numeric  
+importance       19    -none- numeric  
+importanceSD      0    -none- NULL     
+localImportance   0    -none- NULL     
+proximity         0    -none- NULL     
+ntree             1    -none- numeric  
+mtry              1    -none- numeric  
+forest           11    -none- list     
+coefs             0    -none- NULL     
+y               193    -none- numeric  
+test              0    -none- NULL     
+inbag             0    -none- NULL     
+terms             3    terms  call     
+Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+> print(m1) 
+
+Call:
+ randomForest(formula = newBDC ~ LOC + numberOfCommits + CountClassCoupled +      MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic +      NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage +      BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges +      externalEdges + edgesInto + edgesOutOf, data = change) 
+               Type of random forest: regression
+                     Number of trees: 500
+No. of variables tried at each split: 6
+
+          Mean of squared residuals: 0.024
+                    % Var explained: 5.8
+> importance(m1)
+                          IncNodePurity
+LOC                             2.8e-01
+numberOfCommits                 1.2e-01
+CountClassCoupled               2.3e-01
+MaxInheritanceTree              1.0e-01
+PercentLackOfCohesion           1.2e-01
+SumCyclomatic                   2.3e-01
+NumCochangedFiles               3.0e-01
+coChangedDifferentPackage       1.1e-01
+coChangedSamePackage            3.2e-02
+BCO                             0.0e+00
+SPF                             0.0e+00
+BDC                             5.8e-02
+BUO                             3.8e-20
+incomingDep                     1.2e-01
+outgoingDep                     3.5e-01
+internalEdges                   1.4e-01
+externalEdges                   5.6e-01
+edgesInto                       8.7e-01
+edgesOutOf                      3.8e-01
+> 
+> 
+> summary(m1 <- glm.nb(newBDC ~ log2(CountClassCoupled + 1) + BDC + log2(incomingDep + 1) + log2(outgoingDep + 1) + log2(externalEdges + 1)+ log2(edgesInto+1), data=change))
+
+Call:
+glm.nb(formula = newBDC ~ log2(CountClassCoupled + 1) + BDC + 
+    log2(incomingDep + 1) + log2(outgoingDep + 1) + log2(externalEdges + 
+    1) + log2(edgesInto + 1), data = change, init.theta = 8644.419968, 
+    link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.1047  -0.0337   0.0000   0.0000   1.9383  
+
+Coefficients:
+                            Estimate Std. Error z value Pr(>|z|)
+(Intercept)                   -3.378      3.685   -0.92     0.36
+log2(CountClassCoupled + 1)    1.237      1.015    1.22     0.22
+BDC                          -19.971   5303.531    0.00     1.00
+log2(incomingDep + 1)          0.952      1.082    0.88     0.38
+log2(outgoingDep + 1)          0.878      0.870    1.01     0.31
+log2(externalEdges + 1)       -0.835      1.153   -0.72     0.47
+log2(edgesInto + 1)           -1.209      0.982   -1.23     0.22
+
+(Dispersion parameter for Negative Binomial(8644) family taken to be 1)
+
+    Null deviance: 36.532  on 192  degrees of freedom
+Residual deviance: 14.230  on 186  degrees of freedom
+AIC: 40.23
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  8644 
+          Std. Err.:  340738 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -24 
+Warning messages:
+1: In theta.ml(Y, mu, sum(w), w, limit = control$maxit, trace = control$trace >  :
+  iteration limit reached
+2: In theta.ml(Y, mu, sum(w), w, limit = control$maxit, trace = control$trace >  :
+  iteration limit reached
+> Dsquared(m1) #amount of deviance accounted
+[1] 0.61
+> 
+> 
+> summary(m1 <- lm(newBDC ~ CountClassCoupled + BDC + outgoingDep + externalEdges + edgesInto, data=change))
+
+Call:
+lm(formula = newBDC ~ CountClassCoupled + BDC + outgoingDep + 
+    externalEdges + edgesInto, data = change)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.1500 -0.0417 -0.0167  0.0083  0.9005 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        0.083762   0.025264    3.32  0.00110 ** 
+CountClassCoupled  0.000301   0.000176    1.71  0.08830 .  
+BDC               -0.093687   0.025956   -3.61  0.00039 ***
+outgoingDep        0.009493   0.004374    2.17  0.03125 *  
+externalEdges     -0.000346   0.000123   -2.80  0.00559 ** 
+edgesInto          0.000383   0.000171    2.24  0.02654 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.15 on 187 degrees of freedom
+Multiple R-squared:  0.099,	Adjusted R-squared:  0.0749 
+F-statistic: 4.11 on 5 and 187 DF,  p-value: 0.00145
+
+> 
+> ------------------------------------------------------------------------
++ 
++ 
++ 
++ 
++ crossValidationFunction(change, 2, "lm")
+[1] "ratio:0.0288659793814433 precision:NaN recall:0 fMeasure:NaN accuracy:0.971134020618557 AUC:0.888702144216065"
+Error in -crossValidationFunction(change, 2, "lm") : 
+  invalid argument to unary operator
+> crossValidationFunction(change, 2, "glm.nb")
+[1] "ratio:0.0268041237113402 precision:NaN recall:0.208333333333333 fMeasure:NaN accuracy:0.94639175257732 AUC:0.867189791568833"
+> crossValidationFunction(change, 2, "randomForest")
+[1] "ratio:0.0288659793814433 precision:NaN recall:0 fMeasure:NaN accuracy:0.970103092783505 AUC:0.767123926838373"

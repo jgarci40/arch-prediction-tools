@@ -1,0 +1,12 @@
+org.apache.hadoop.hbase.util,org.apache.hadoop.hbase.util,1.0
+org.apache.hadoop.hbase.filter,org.apache.hadoop.hbase.filter,1.0
+org.apache.hadoop.hbase.hql.formatter,org.apache.hadoop.hbase.hql.formatter,1.0
+org.apache.hadoop.hbase.io,org.apache.hadoop.hbase.io,1.0
+org.apache.hadoop.hbase.thrift.generated,org.apache.hadoop.hbase.thrift.generated,1.0
+org.apache.hadoop.hbase.rest,org.apache.hadoop.hbase.rest,1.0
+org.apache.hadoop.hbase.ipc,org.apache.hadoop.hbase.ipc,1.0
+org.apache.hadoop.hbase.hql,org.apache.hadoop.hbase.hql,1.0
+org.apache.hadoop.hbase,org.apache.hadoop.hbase,0.979166666667
+org.apache.hadoop.hbase.hql.generated,org.apache.hadoop.hbase.hql.generated,1.0
+org.apache.hadoop.hbase.mapred,org.apache.hadoop.hbase.mapred,1.0
+org.apache.hadoop.hbase.thrift,org.apache.hadoop.hbase.thrift,1.0

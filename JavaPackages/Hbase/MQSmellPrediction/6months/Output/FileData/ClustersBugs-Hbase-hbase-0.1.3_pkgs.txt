@@ -1,0 +1,11 @@
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.thrift.generated 11
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.io 17
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.ipc 5
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.hql 0
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.rest 18
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.hql.generated 0
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.util 21
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.thrift 5
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase 68
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.mapred 11
+Hbase-hbase-0.1.3_pkgs-org.apache.hadoop.hbase.filter 0

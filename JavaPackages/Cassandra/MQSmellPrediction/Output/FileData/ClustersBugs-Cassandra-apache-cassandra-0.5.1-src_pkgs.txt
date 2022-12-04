@@ -1,0 +1,17 @@
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.dht 1
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.net 1
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.utils 3
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.contrib.circuit 0
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.db.marshal 1
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.io 1
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.db.filter 7
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.concurrent 1
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.locator 10
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.config 6
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.client 0
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.net.io 0
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.db 22
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.cli 3
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.tools 3
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.service 31
+Cassandra-apache-cassandra-0.5.1-src_pkgs-org.apache.cassandra.gms 1

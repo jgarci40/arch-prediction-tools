@@ -1,0 +1,17 @@
+org.apache.cassandra.db.marshal,org.apache.cassandra.db.marshal,0.727272727273
+org.apache.cassandra.db.filter,org.apache.cassandra.db.filter,1.0
+org.apache.cassandra.client,org.apache.cassandra.client,1.0
+org.apache.cassandra.dht,org.apache.cassandra.dht,0.909090909091
+org.apache.cassandra,org.apache.cassandra,1.0
+org.apache.cassandra.tools,org.apache.cassandra.tools,1.0
+org.apache.cassandra.utils,org.apache.cassandra.utils,0.757575757576
+org.apache.cassandra.concurrent,org.apache.cassandra.concurrent,0.636363636364
+org.apache.cassandra.db,org.apache.cassandra.db,0.838235294118
+org.apache.cassandra.locator,org.apache.cassandra.locator,1.0
+org.apache.cassandra.net.sink,org.apache.cassandra.net.sink,1.0
+org.apache.cassandra.cli,org.apache.cassandra.cli,1.0
+org.apache.cassandra.net,org.apache.cassandra.net,0.666666666667
+org.apache.cassandra.config,org.apache.cassandra.config,1.0
+org.apache.cassandra.gms,org.apache.cassandra.gms,1.0
+org.apache.cassandra.io,org.apache.cassandra.io,0.541666666667
+org.apache.cassandra.contrib.circuit,org.apache.cassandra.contrib.circuit,1.0

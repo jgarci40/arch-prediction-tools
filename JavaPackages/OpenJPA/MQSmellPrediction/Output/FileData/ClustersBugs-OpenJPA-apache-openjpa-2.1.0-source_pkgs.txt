@@ -1,0 +1,11 @@
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.enhance 0
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.kernel 4
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.jdbc.schema 3
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.jdbc.kernel 1
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.jdbc.sql 5
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.meta 0
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.abstractstore 0
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.datacache 0
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.kernel.exps 0
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.persistence 0
+OpenJPA-apache-openjpa-2.1.0-source_pkgs-org.apache.openjpa.lib.jdbc 0

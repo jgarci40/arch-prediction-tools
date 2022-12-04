@@ -1,0 +1,16 @@
+org.apache.hadoop.hbase.thrift.generated 1 0 2 471 282 189
+org.apache.hadoop.hbase.regionserver 6 6 55 642 102 540
+org.apache.hadoop.hbase.regionserver.transactional 0 7 7 174 10 164
+org.apache.hadoop.hbase.io 13 3 9 343 187 156
+org.apache.hadoop.hbase.ipc 7 4 1 130 67 63
+org.apache.hadoop.hbase.rest 0 4 9 184 10 174
+org.apache.hadoop.hbase.util 11 6 14 478 173 305
+org.apache.hadoop.hbase 13 6 35 785 508 277
+org.apache.hadoop.hbase.thrift 0 4 0 41 2 39
+org.apache.hadoop.hbase.mapred 0 5 17 275 7 268
+org.apache.hadoop.hbase.master 1 7 81 494 36 458
+org.apache.hadoop.hbase.filter 10 4 9 131 41 90
+org.apache.hadoop.hbase.util.migration.v5 1 7 43 491 48 443
+org.apache.hadoop.hbase.client.transactional 1 5 7 96 21 75
+org.apache.hadoop.hbase.client 9 5 19 264 119 145
+

@@ -1,0 +1,27 @@
+org.apache.cassandra.cql.common 5 5 37 208 29 179
+org.apache.cassandra.test 0 6 1 79 0 79
+org.apache.cassandra.analytics 2 3 16 76 6 70
+org.apache.cassandra.tools 1 7 1 186 3 183
+org.apache.cassandra.utils 17 3 16 371 148 223
+org.apache.cassandra.net.sink 1 1 1 8 2 6
+org.apache.cassandra.service 11 14 51 1009 323 686
+org.apache.cassandra.loader 0 7 25 151 0 151
+org.apache.cassandra 0 0 0 0 0 0
+org.apache.cassandra.procedures 1 0 0 4 1 3
+org.apache.cassandra.cql.compiler.sem 2 3 1 34 3 31
+org.apache.cassandra.cql.execution 1 0 0 11 7 4
+org.apache.cassandra.dht 7 8 31 240 67 173
+org.apache.cassandra.cli 0 2 9 161 25 136
+org.apache.cassandra.db 9 9 175 1132 208 924
+org.apache.cassandra.net.http 1 9 16 168 14 154
+org.apache.cassandra.cql.compiler.parse 2 0 1 116 39 77
+org.apache.cassandra.concurrent 6 1 23 216 41 175
+org.apache.cassandra.gms 4 6 28 192 55 137
+org.apache.cassandra.net.io 3 3 37 145 28 117
+org.apache.cassandra.config 14 2 1 92 55 37
+org.apache.cassandra.net 11 7 76 547 257 290
+org.apache.cassandra.cql.compiler.common 2 3 0 33 4 29
+org.apache.cassandra.locator 3 5 8 84 10 74
+org.apache.cassandra.cql.driver 1 5 0 16 1 15
+org.apache.cassandra.io 10 5 20 381 215 166
+

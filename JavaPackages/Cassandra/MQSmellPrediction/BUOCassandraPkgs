@@ -1,0 +1,151 @@
+> summary(m1 <- randomForest(BUOnextRelease ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data=change))
+                Length Class  Mode     
+call              3    -none- call     
+type              1    -none- character
+predicted       112    -none- numeric  
+mse             500    -none- numeric  
+rsq             500    -none- numeric  
+oob.times       112    -none- numeric  
+importance       19    -none- numeric  
+importanceSD      0    -none- NULL     
+localImportance   0    -none- NULL     
+proximity         0    -none- NULL     
+ntree             1    -none- numeric  
+mtry              1    -none- numeric  
+forest           11    -none- list     
+coefs             0    -none- NULL     
+y               112    -none- numeric  
+test              0    -none- NULL     
+inbag             0    -none- NULL     
+terms             3    terms  call     
+Warning message:
+In randomForest.default(m, y, ...) :
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+> print(m1) 
+
+Call:
+ randomForest(formula = BUOnextRelease ~ LOC + numberOfCommits +      CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion +      SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage +      coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep +      outgoingDep + internalEdges + externalEdges + edgesInto +      edgesOutOf, data = change) 
+               Type of random forest: regression
+                     Number of trees: 500
+No. of variables tried at each split: 6
+
+          Mean of squared residuals: 0.054
+                    % Var explained: 66
+> importance(m1)
+                          IncNodePurity
+LOC                               1.140
+numberOfCommits                   0.489
+CountClassCoupled                 0.690
+MaxInheritanceTree                0.300
+PercentLackOfCohesion             0.356
+SumCyclomatic                     0.820
+NumCochangedFiles                 0.298
+coChangedDifferentPackage         0.596
+coChangedSamePackage              0.207
+BCO                               0.000
+SPF                               0.000
+BDC                               0.032
+BUO                               5.907
+incomingDep                       2.728
+outgoingDep                       0.659
+internalEdges                     0.558
+externalEdges                     1.006
+edgesInto                         0.417
+edgesOutOf                        0.662
+> 
+> 
+> summary(m1 <- glm.nb(BUOnextRelease ~ log2(numberOfCommits + 1) + log2(CountClassCoupled + 1) + log2(NumCochangedFiles + 1) + BUO + log2(internalEdges + 1) + log2(edgesInto + 1), data=change))
+
+Call:
+glm.nb(formula = BUOnextRelease ~ log2(numberOfCommits + 1) + 
+    log2(CountClassCoupled + 1) + log2(NumCochangedFiles + 1) + 
+    BUO + log2(internalEdges + 1) + log2(edgesInto + 1), data = change, 
+    init.theta = 17197.86449, link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.3811  -0.2263  -0.1399  -0.0682   1.3437  
+
+Coefficients:
+                            Estimate Std. Error z value Pr(>|z|)   
+(Intercept)                   -9.055      3.167   -2.86   0.0042 **
+log2(numberOfCommits + 1)      0.954      0.610    1.57   0.1174   
+log2(CountClassCoupled + 1)    1.435      0.695    2.06   0.0391 * 
+log2(NumCochangedFiles + 1)   -1.050      0.603   -1.74   0.0818 . 
+BUO                            1.768      0.713    2.48   0.0132 * 
+log2(internalEdges + 1)       -0.975      0.417   -2.34   0.0194 * 
+log2(edgesInto + 1)            0.497      0.264    1.88   0.0599 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(17198) family taken to be 1)
+
+    Null deviance: 71.607  on 111  degrees of freedom
+Residual deviance: 14.694  on 105  degrees of freedom
+AIC: 74.7
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  17198 
+          Std. Err.:  306485 
+Warning while fitting theta: iteration limit reached 
+
+ 2 x log-likelihood:  -59 
+Warning messages:
+1: In theta.ml(Y, mu, sum(w), w, limit = control$maxit, trace = control$trace >  :
+  iteration limit reached
+2: In theta.ml(Y, mu, sum(w), w, limit = control$maxit, trace = control$trace >  :
+  iteration limit reached
+> Dsquared(m1) #amount of deviance accounted
+[1] 0.79
+> 
+> 
+> summary(m1 <- lm(BUOnextRelease ~ CountClassCoupled + MaxInheritanceTree + NumCochangedFiles + coChangedDifferentPackage + BUO + incomingDep + internalEdges, data=change))
+
+Call:
+lm(formula = BUOnextRelease ~ CountClassCoupled + MaxInheritanceTree + 
+    NumCochangedFiles + coChangedDifferentPackage + BUO + incomingDep + 
+    internalEdges, data = change)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.8146 -0.0554 -0.0040  0.0219  0.9027 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)               -0.028585   0.032815   -0.87  0.38572    
+CountClassCoupled          0.001585   0.000427    3.72  0.00033 ***
+MaxInheritanceTree        -0.009777   0.004605   -2.12  0.03612 *  
+NumCochangedFiles         -0.000379   0.000150   -2.53  0.01286 *  
+coChangedDifferentPackage  0.003910   0.001581    2.47  0.01503 *  
+BUO                        0.604236   0.076832    7.86  3.6e-12 ***
+incomingDep                0.012727   0.004893    2.60  0.01065 *  
+internalEdges             -0.003735   0.001546   -2.42  0.01741 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.19 on 104 degrees of freedom
+Multiple R-squared:  0.789,	Adjusted R-squared:  0.774 
+F-statistic: 55.4 on 7 and 104 DF,  p-value: <2e-16
+
+> ------------------------------------------------------------------------------
++ 
++ 
++ 
++ 
++ 
++ 
++ 
++ 
++ crossValidationFunction(change, 3, "lm")
+[1] "ratio:0.196578947368421 precision:0.859338023088023 recall:0.835838744588744 fMeasure:0.838651862928952 accuracy:0.941315789473683 AUC:0.968898171743525"
+Error in -crossValidationFunction(change, 3, "lm") : 
+  invalid argument to unary operator
+> crossValidationFunction(change, 3, "glm.nb")
+[1] "ratio:0.195 precision:0.934523448773449 recall:0.706291486291486 fMeasure:0.790093391558561 accuracy:0.930789473684209 AUC:0.976305801148658"
+There were 50 or more warnings (use warnings() to see the first 50)
+> crossValidationFunction(change, 3, "randomForest")
+[1] "ratio:0.201315789473684 precision:0.899963702963703 recall:0.783520979020979 fMeasure:0.823298361418572 accuracy:0.936315789473683 AUC:0.973711432883498"
+There were 50 or more warnings (use warnings() to see the first 50)
+> 

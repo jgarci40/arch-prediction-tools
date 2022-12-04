@@ -1,0 +1,141 @@
+> summary(m1 <- randomForest(BugCountMult ~ LOC + numberOfCommits + CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion + SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage + coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep + outgoingDep + internalEdges + externalEdges + edgesInto + edgesOutOf, data=change))
+                Length Class  Mode     
+call              3    -none- call     
+type              1    -none- character
+predicted       223    -none- numeric  
+mse             500    -none- numeric  
+rsq             500    -none- numeric  
+oob.times       223    -none- numeric  
+importance       19    -none- numeric  
+importanceSD      0    -none- NULL     
+localImportance   0    -none- NULL     
+proximity         0    -none- NULL     
+ntree             1    -none- numeric  
+mtry              1    -none- numeric  
+forest           11    -none- list     
+coefs             0    -none- NULL     
+y               223    -none- numeric  
+test              0    -none- NULL     
+inbag             0    -none- NULL     
+terms             3    terms  call     
+> print(m1) 
+
+Call:
+ randomForest(formula = BugCountMult ~ LOC + numberOfCommits +      CountClassCoupled + MaxInheritanceTree + PercentLackOfCohesion +      SumCyclomatic + NumCochangedFiles + coChangedDifferentPackage +      coChangedSamePackage + BCO + SPF + BDC + BUO + incomingDep +      outgoingDep + internalEdges + externalEdges + edgesInto +      edgesOutOf, data = change) 
+               Type of random forest: regression
+                     Number of trees: 500
+No. of variables tried at each split: 6
+
+          Mean of squared residuals: 181.9125
+                    % Var explained: 73.1
+> importance(m1)
+                          IncNodePurity
+LOC                           5325.2918
+numberOfCommits              36876.6947
+CountClassCoupled            32966.2624
+MaxInheritanceTree            5209.9284
+PercentLackOfCohesion         1802.7791
+SumCyclomatic                 1808.4155
+NumCochangedFiles             6376.2081
+coChangedDifferentPackage    12395.1435
+coChangedSamePackage         14865.3467
+BCO                              0.0000
+SPF                              0.0000
+BDC                            158.6005
+BUO                            750.6841
+incomingDep                   2693.8158
+outgoingDep                   4915.9842
+internalEdges                 5171.2835
+externalEdges                 3948.8760
+edgesInto                     3933.9207
+edgesOutOf                    7736.5157
+> 
+> 
+> summary(m1 <- glm.nb(BugCountMult ~ log2(numberOfCommits + 1) + log2(CountClassCoupled + 1) + log2(coChangedDifferentPackage + 1) + log2(NumCochangedFiles + 1) + log2(edgesInto + 1), data=change))
+
+Call:
+glm.nb(formula = BugCountMult ~ log2(numberOfCommits + 1) + log2(CountClassCoupled + 
+    1) + log2(coChangedDifferentPackage + 1) + log2(NumCochangedFiles + 
+    1) + log2(edgesInto + 1), data = change, init.theta = 2.268432689, 
+    link = log)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.0278  -1.1066  -0.1286   0.5285   2.8674  
+
+Coefficients:
+                                    Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                         -0.95452    0.28272  -3.376 0.000735 ***
+log2(numberOfCommits + 1)            0.29572    0.11567   2.556 0.010573 *  
+log2(CountClassCoupled + 1)          0.20888    0.07827   2.669 0.007617 ** 
+log2(coChangedDifferentPackage + 1)  0.28942    0.10152   2.851 0.004360 ** 
+log2(NumCochangedFiles + 1)         -0.10398    0.06465  -1.608 0.107766    
+log2(edgesInto + 1)                  0.04142    0.02928   1.415 0.157142    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(2.2684) family taken to be 1)
+
+    Null deviance: 838.73  on 222  degrees of freedom
+Residual deviance: 255.21  on 217  degrees of freedom
+AIC: 1396.3
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  2.268 
+          Std. Err.:  0.305 
+
+ 2 x log-likelihood:  -1382.316 
+> Dsquared(m1) #amount of deviance accounted
+[1] 0.6957174
+> 
+> 
+> summary(m1 <- lm(BugCountMult ~ LOC + numberOfCommits + CountClassCoupled + NumCochangedFiles + coChangedSamePackage + incomingDep + internalEdges + externalEdges + edgesInto, data=change))
+
+Call:
+lm(formula = BugCountMult ~ LOC + numberOfCommits + CountClassCoupled + 
+    NumCochangedFiles + coChangedSamePackage + incomingDep + 
+    internalEdges + externalEdges + edgesInto, data = change)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-65.581  -4.112  -0.267   3.626  51.513 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          -0.1877726  1.3152250  -0.143 0.886608    
+LOC                   0.0006802  0.0002936   2.317 0.021444 *  
+numberOfCommits       0.7018135  0.0837679   8.378 7.24e-15 ***
+CountClassCoupled     0.1284552  0.0282885   4.541 9.37e-06 ***
+NumCochangedFiles    -0.0231323  0.0072549  -3.189 0.001645 ** 
+coChangedSamePackage -0.8185630  0.1227097  -6.671 2.16e-10 ***
+incomingDep          -0.3475578  0.2453968  -1.416 0.158146    
+internalEdges         0.2698776  0.0767059   3.518 0.000531 ***
+externalEdges        -0.0389709  0.0136225  -2.861 0.004647 ** 
+edgesInto             0.0272256  0.0169302   1.608 0.109292    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.91 on 213 degrees of freedom
+Multiple R-squared:  0.7995,	Adjusted R-squared:  0.7911 
+F-statistic:  94.4 on 9 and 213 DF,  p-value: < 2.2e-16
+
+> 
+> 
+> 
+> 
+> crossValidationFunction(change, 3, "lm")
+[1] "ratio:0.880266666666667 precision:0.915588800940904 recall:0.919603586814673 fMeasure:0.916569313054221 accuracy:0.853866666666666 AUC:0.812480327341788"
+> crossValidationFunction(change, 3, "glm.nb")
+[1] "ratio:0.884799999999999 precision:0.884799999999999 recall:1 fMeasure:0.938577644724365 accuracy:0.884799999999999 AUC:0.853594864303614"
+> crossValidationFunction(change, 3, "randomForest")
+[1] "ratio:0.885866666666666 precision:0.886897297297297 recall:0.99940004877369 fMeasure:0.939559121984969 accuracy:0.886533333333333 AUC:0.84213597848872"
+> 
+> rankingFunction(change, 3,"lm")
+[1] "lm spearman: 0.718514704528553 spearman.p: 4.54936415440501e-09"
+> rankingFunction(change, 3,"glm.nb")
+[1] "glm.nb spearman: 0.788515065132606 spearman.p: 1.89204059367696e-11"
+> rankingFunction(change, 3,"randomForest")
+[1] "randomForest spearman: 0.77085067863414 spearman.p: 2.01433201668041e-12"
+> 

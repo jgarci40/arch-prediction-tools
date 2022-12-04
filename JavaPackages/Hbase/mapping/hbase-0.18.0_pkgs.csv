@@ -1,0 +1,14 @@
+org.apache.hadoop.hbase.util,org.apache.hadoop.hbase.util,0.954545454545
+org.apache.hadoop.hbase.filter,org.apache.hadoop.hbase.filter,1.0
+org.apache.hadoop.hbase.regionserver.transactional,org.apache.hadoop.hbase.regionserver.transactional,1.0
+org.apache.hadoop.hbase.client.transactional,org.apache.hadoop.hbase.client.transactional,1.0
+org.apache.hadoop.hbase.io,org.apache.hadoop.hbase.io,1.0
+org.apache.hadoop.hbase.ipc,org.apache.hadoop.hbase.ipc,0.8
+org.apache.hadoop.hbase.thrift.generated,org.apache.hadoop.hbase.thrift.generated,1.0
+org.apache.hadoop.hbase.rest,org.apache.hadoop.hbase.rest,1.0
+org.apache.hadoop.hbase.regionserver,org.apache.hadoop.hbase.regionserver,0.948717948718
+org.apache.hadoop.hbase.client,org.apache.hadoop.hbase.client,1.0
+org.apache.hadoop.hbase.master,org.apache.hadoop.hbase.master,1.0
+org.apache.hadoop.hbase,org.apache.hadoop.hbase,0.946428571429
+org.apache.hadoop.hbase.mapred,org.apache.hadoop.hbase.mapred,1.0
+org.apache.hadoop.hbase.thrift,org.apache.hadoop.hbase.thrift,1.0

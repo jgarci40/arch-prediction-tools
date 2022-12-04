@@ -1,0 +1,17 @@
+org.apache.hadoop.hbase.ipc 4 4 36 1 6 1669 0 0 1 0 79 4 91 37 7 4 8 241 93 148 0 0 1 0 0.068
+org.apache.hadoop.hbase.util 5 18 79 2 24 1142 0 0 1 1 130 17 0 7 13 5 18 468 166 302 0 0 1 1 0.07
+org.apache.hadoop.hbase.regionserver 82 82 487 26 135 6561 0 0 1 0 456 18 94 237 6 7 63 683 93 590 0 0 1 0 0.15
+org.apache.hadoop.hbase.client 9 24 157 13 38 1977 0 0 1 0 72 10 86 111 10 6 23 317 147 170 0 0 1 0 0.124
+org.apache.hadoop.hbase.thrift 0 1 1 2 1 528 0 0 0 0 8 1 0 11 0 4 0 41 2 39 0 0 0 0 0.0
+org.apache.hadoop.hbase.regionserver.transactional 0 4 37 1 4 601 0 0 0 0 74 4 85 63 1 7 7 179 12 167 0 0 1 0 0.066
+org.apache.hadoop.hbase.mapred 7 6 27 2 12 487 0 0 0 0 85 12 100 2 0 5 24 291 7 284 0 0 0 0 0.142
+org.apache.hadoop.hbase.regionserver.metrics 0 4 14 1 4 76 0 0 1 0 12 1 71 8 1 1 0 23 2 21 0 0 1 0 0.0
+org.apache.hadoop.hbase.filter 7 2 14 2 7 323 0 0 1 0 39 4 19 6 10 4 11 143 37 106 0 0 1 0 0.134
+org.apache.hadoop.hbase.rest 5 0 8 4 5 866 0 0 0 0 84 7 96 32 0 4 9 188 10 178 0 0 0 0 0.087
+org.apache.hadoop.hbase.master 66 67 521 22 82 2844 0 0 1 0 330 39 0 2 1 8 83 508 37 471 0 0 1 0 0.243
+org.apache.hadoop.hbase.master.metrics 0 1 7 0 1 35 0 0 0 0 3 1 66 6 1 0 0 15 2 13 0 0 0 0 0.0
+org.apache.hadoop.hbase.regionserver.tableindexed 2 3 37 1 3 240 0 0 0 0 37 6 0 3 0 8 1 54 1 53 0 0 1 0 0.053
+org.apache.hadoop.hbase.io 18 30 172 14 35 3754 0 0 1 1 173 24 33 24 13 3 18 526 250 276 0 0 1 1 0.069
+org.apache.hadoop.hbase.client.tableindexed 13 11 99 3 13 311 0 0 1 0 52 12 67 23 3 5 7 75 7 68 0 0 1 0 0.132
+org.apache.hadoop.hbase.thrift.generated 0 1 1 1 1 9477 0 0 0 0 0 1 0 0 1 0 2 493 300 193 0 0 0 0 0.008
+org.apache.hadoop.hbase 16 31 169 17 36 2261 0 0 1 1 189 15 30 20 14 7 35 799 518 281 0 0 1 1 0.079

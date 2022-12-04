@@ -1,0 +1,26 @@
+org.apache.hadoop.hbase.rest.filter bdc
+org.apache.hadoop.hbase.ipc bdc
+org.apache.hadoop.hbase.io.hfile bdc
+org.apache.hadoop.hbase.migration.nineteen bdc
+org.apache.hadoop.hbase.util buo
+org.apache.hadoop.hbase.util bdc
+org.apache.hadoop.hbase.rest.serializer bdc
+org.apache.hadoop.hbase.regionserver buo
+org.apache.hadoop.hbase.regionserver bdc
+org.apache.hadoop.hbase.rest.descriptors bdc
+org.apache.hadoop.hbase.client bdc
+org.apache.hadoop.hbase.migration.nineteen.regionserver bdc
+org.apache.hadoop.hbase.regionserver.metrics bdc
+org.apache.hadoop.hbase.migration.nineteen.onelab.filter bdc
+org.apache.hadoop.hbase.filter bdc
+org.apache.hadoop.hbase.rest buo
+org.apache.hadoop.hbase.rest bdc
+org.apache.hadoop.hbase.migration.nineteen.io bdc
+org.apache.hadoop.hbase.master bdc
+org.apache.hadoop.hbase.io buo
+org.apache.hadoop.hbase.io bdc
+org.apache.hadoop.hbase.rest.parser bdc
+org.apache.hadoop.hbase.zookeeper bdc
+org.apache.hadoop.hbase buo
+org.apache.hadoop.hbase bdc
+

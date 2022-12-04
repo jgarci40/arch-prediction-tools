@@ -1,0 +1,11 @@
+org.apache.hadoop.hbase.ipc bdc
+org.apache.hadoop.hbase.hql.formatter bdc
+org.apache.hadoop.hbase.util bdc
+org.apache.hadoop.hbase.filter bdc
+org.apache.hadoop.hbase.hql.generated bdc
+org.apache.hadoop.hbase.io bdc
+org.apache.hadoop.hbase buo
+org.apache.hadoop.hbase bdc
+org.apache.hadoop.hbase.hql buo
+org.apache.hadoop.hbase.hql bdc
+
